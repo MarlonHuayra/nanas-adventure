@@ -1,19 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://dkrcrmc75sbhb"]
 
-[ext_resource type="Script" path="res://scripts/menu.gd" id="1_mvqhe"]
-[ext_resource type="Texture2D" uid="uid://cbwy763mi07f0" path="res://assets/backgrounds/bgMagicForest.png" id="2_btony"]
+[ext_resource type="Script" path="res://scripts/authentication.gd" id="1_eghu3"]
+[ext_resource type="Texture2D" uid="uid://cbwy763mi07f0" path="res://assets/backgrounds/bgMagicForest.png" id="2_hgmn8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfvp3"]
 bg_color = Color(0, 0, 0, 1)
 
-[node name="Login" type="Control"]
+[node name="Authentication" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_mvqhe")
+script = ExtResource("1_eghu3")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -22,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_btony")
+texture = ExtResource("2_hgmn8")
 expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -40,22 +40,26 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 21
 
-[node name="NotLoggedIn" type="Label" parent="VBoxContainer"]
+[node name="StateLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Not logged in"
 
-[node name="Email" type="LineEdit" parent="VBoxContainer"]
+[node name="EmailLineEdit" type="LineEdit" parent="VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 placeholder_text = "Email"
 
-[node name="Password" type="LineEdit" parent="VBoxContainer"]
+[node name="PasswordLineEdit" type="LineEdit" parent="VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 placeholder_text = "Password"
+secret = true
 
-[node name="Login" type="Button" parent="VBoxContainer"]
+[node name="LoginButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0.49461, 0.828174, 0.658518, 1)
@@ -63,7 +67,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_rfvp3")
 text = "Log in"
 
-[node name="Signin" type="Button" parent="VBoxContainer"]
+[node name="SignupButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0.49461, 0.828174, 0.658518, 1)
@@ -71,7 +75,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_rfvp3")
 text = "Sign in"
 
-[node name="LoginGoogle" type="Button" parent="VBoxContainer"]
+[node name="LoginGoogleButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0.49461, 0.828174, 0.658518, 1)
@@ -80,7 +84,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rfvp3")
 text = "LOGIN WITH GOOGLE
 "
 
-[node name="LoginFacebook" type="Button" parent="VBoxContainer"]
+[node name="LoginFacebookButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0.49461, 0.828174, 0.658518, 1)
@@ -88,15 +92,11 @@ theme_override_font_sizes/font_size = 30
 keep_pressed_outside = true
 text = "LOGIN WITH FACEBOOK"
 
-[node name="Quit" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(0.49461, 0.828174, 0.658518, 1)
-theme_override_font_sizes/font_size = 40
-text = "Quit"
-
-[connection signal="pressed" from="VBoxContainer/Login" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/Signin" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/LoginGoogle" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/LoginFacebook" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/LoginButton" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/LoginButton" to="." method="_on_login_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/LoginButton" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="VBoxContainer/SignupButton" to="." method="_on_signin_pressed"]
+[connection signal="pressed" from="VBoxContainer/SignupButton" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/SignupButton" to="." method="_on_signup_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/LoginGoogleButton" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/LoginFacebookButton" to="." method="_on_options_pressed"]

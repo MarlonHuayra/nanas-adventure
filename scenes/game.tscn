@@ -535,6 +535,26 @@ _data = {
 [node name="Game" type="Node2D"]
 position = Vector2(0, 1)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+follow_viewport_enabled = true
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = -142.0
+offset_top = -57.0
+offset_right = -102.0
+offset_bottom = -34.0
+text = "test
+"
+
+[node name="LogoutButton" type="Button" parent="CanvasLayer"]
+offset_left = -147.0
+offset_top = -71.0
+offset_right = -85.0
+offset_bottom = -40.0
+scale = Vector2(0.582557, 0.6065)
+text = "Logout"
+
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_vjs3i")
@@ -565,6 +585,7 @@ position = Vector2(-111, -6)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -5)
+offset = Vector2(1, 1)
 zoom = Vector2(4, 4)
 limit_bottom = 78
 limit_smoothed = true
@@ -679,3 +700,5 @@ position = Vector2(680, 33)
 
 [node name="Slime2" parent="Enemys" instance=ExtResource("6_bv6jd")]
 position = Vector2(327, -48)
+
+[connection signal="pressed" from="CanvasLayer/LogoutButton" to="GameManager" method="_on_logout_button_pressed"]
