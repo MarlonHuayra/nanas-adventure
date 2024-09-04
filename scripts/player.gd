@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 110.0
-const JUMP_VELOCITY = -300.0
+const SPEED = 210.0
+const JUMP_VELOCITY = -650
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -36,9 +36,9 @@ func _physics_process(delta):
 		if direction != 0:
 			animated_sprite.play("nanaRun")  # Assuming you have a "run" animation
 		else:
-			animated_sprite.play("idle")  # Assuming you have an "idle" animation
+			animated_sprite.play("nanaIdle")  # Assuming you have an "idle" animation
 	else:
-		animated_sprite.play("jump")  # Assuming you have a "jump" animation
+		animated_sprite.play("nanaJump")  # ssuming you have a "jump" animation
 
 	#apply movement
 	if direction:

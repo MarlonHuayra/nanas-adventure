@@ -1,63 +1,83 @@
-[gd_scene load_steps=10 format=3 uid="uid://qj6m2njcuvbb"]
+[gd_scene load_steps=17 format=3 uid="uid://qj6m2njcuvbb"]
 
-[ext_resource type="Texture2D" uid="uid://dcklo42qwibpl" path="res://assets/sprites/slime_green.png" id="1_b4tcb"]
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_epl4i"]
+[ext_resource type="Texture2D" uid="uid://byabv2jj5rket" path="res://assets/sprites/2D Platformer Tileset/Sprites/Enemy/Slime/run/slime_run_00.png" id="2_mh65y"]
 [ext_resource type="PackedScene" uid="uid://cib4t41c15tt1" path="res://scenes/killzone.tscn" id="2_tqco4"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i0yf7"]
-atlas = ExtResource("1_b4tcb")
-region = Rect2(0, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fgalq"]
-atlas = ExtResource("1_b4tcb")
-region = Rect2(24, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0lwex"]
-atlas = ExtResource("1_b4tcb")
-region = Rect2(48, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_04478"]
-atlas = ExtResource("1_b4tcb")
-region = Rect2(72, 24, 24, 24)
+[ext_resource type="Texture2D" uid="uid://cmcfhufu8cdnl" path="res://assets/sprites/2D Platformer Tileset/Sprites/Enemy/Slime/run/slime_run_01.png" id="3_mp5iu"]
+[ext_resource type="Texture2D" uid="uid://bh2iatvk11y6s" path="res://assets/sprites/2D Platformer Tileset/Sprites/Enemy/Slime/run/slime_run_02.png" id="4_mqa1o"]
+[ext_resource type="Texture2D" uid="uid://d3pjcqoktlvfi" path="res://assets/sprites/2D Platformer Tileset/Sprites/Enemy/Slime/run/slime_run_03.png" id="5_rjalx"]
+[ext_resource type="Texture2D" uid="uid://cwg486ciujr4m" path="res://assets/sprites/2D Platformer Tileset/Sprites/Enemy/Slime/run/slime_run_04.png" id="6_3fghx"]
+[ext_resource type="Texture2D" uid="uid://brqbcmlyis8i8" path="res://assets/sprites/2D Platformer Tileset/Sprites/Enemy/Slime/run/slime_run_05.png" id="7_wv3ki"]
+[ext_resource type="Texture2D" uid="uid://cef8470xutd7m" path="res://assets/sprites/2D Platformer Tileset/Sprites/Enemy/Slime/run/slime_run_06.png" id="8_kwxjf"]
+[ext_resource type="Texture2D" uid="uid://din5h01us50j" path="res://assets/sprites/2D Platformer Tileset/Sprites/Enemy/Slime/run/slime_run_07.png" id="9_iin2e"]
+[ext_resource type="Texture2D" uid="uid://bpp20fuat0ijj" path="res://assets/sprites/2D Platformer Tileset/Sprites/Enemy/Slime/run/slime_run_08.png" id="10_lktvv"]
+[ext_resource type="Texture2D" uid="uid://damprs46qufjs" path="res://assets/sprites/2D Platformer Tileset/Sprites/Enemy/Slime/run/slime_run_09.png" id="11_bcub7"]
+[ext_resource type="Texture2D" uid="uid://cg1h3e6liro77" path="res://assets/sprites/2D Platformer Tileset/Sprites/Enemy/Slime/run/slime_run_10.png" id="12_yeec5"]
+[ext_resource type="Texture2D" uid="uid://detqjes6tws4" path="res://assets/sprites/2D Platformer Tileset/Sprites/Enemy/Slime/run/slime_run_11.png" id="13_cu6ug"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m75w0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i0yf7")
+"texture": ExtResource("2_mh65y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fgalq")
+"texture": ExtResource("3_mp5iu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0lwex")
+"texture": ExtResource("4_mqa1o")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_04478")
+"texture": ExtResource("5_rjalx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3fghx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wv3ki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kwxjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_iin2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lktvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bcub7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yeec5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_cu6ug")
 }],
 "loop": true,
 "name": &"idleEnemy",
-"speed": 10.0
+"speed": 11.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0sru3"]
-size = Vector2(10, 11)
+size = Vector2(55, 44)
 
 [node name="Slime" type="Node2D"]
 script = ExtResource("1_epl4i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -12)
+position = Vector2(-7, -75)
 sprite_frames = SubResource("SpriteFrames_m75w0")
 animation = &"idleEnemy"
 autoplay = "idleEnemy"
-frame_progress = 0.311836
+frame = 1
+frame_progress = 0.289349
 
 [node name="Killzone" parent="." instance=ExtResource("2_tqco4")]
 position = Vector2(0, -12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(0, 5.5)
+position = Vector2(1.5, -15)
 shape = SubResource("RectangleShape2D_0sru3")
 
 [node name="RayCastRight" type="RayCast2D" parent="."]

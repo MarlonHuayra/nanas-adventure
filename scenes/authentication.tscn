@@ -61,24 +61,24 @@ secret = true
 
 [node name="LoginButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0.49461, 0.828174, 0.658518, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_rfvp3")
 text = "Log in"
 
 [node name="SignupButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0.49461, 0.828174, 0.658518, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_rfvp3")
 text = "Sign in"
 
 [node name="LoginGoogleButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0.49461, 0.828174, 0.658518, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_rfvp3")
 text = "LOGIN WITH GOOGLE
@@ -86,17 +86,17 @@ text = "LOGIN WITH GOOGLE
 
 [node name="LoginFacebookButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0.49461, 0.828174, 0.658518, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 keep_pressed_outside = true
 text = "LOGIN WITH FACEBOOK"
 
-[connection signal="pressed" from="VBoxContainer/LoginButton" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/LoginButton" to="." method="_on_login_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/LoginButton" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="VBoxContainer/LoginButton" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/SignupButton" to="." method="_on_signup_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/SignupButton" to="." method="_on_signin_pressed"]
 [connection signal="pressed" from="VBoxContainer/SignupButton" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/SignupButton" to="." method="_on_signup_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/LoginGoogleButton" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/LoginFacebookButton" to="." method="_on_options_pressed"]
