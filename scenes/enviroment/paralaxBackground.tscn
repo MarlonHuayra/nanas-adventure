@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfaju0ynypchb"]
+
+[ext_resource type="Texture2D" uid="uid://bawvknu3ymjvf" path="res://assets/sprites/2D Platformer Tileset/Sprites/Backgrounds/Forest_Background/bg_forest_5.png" id="1_h1npt"]
+[ext_resource type="Texture2D" uid="uid://dl3plq4ssbhwn" path="res://assets/sprites/2D Platformer Tileset/Sprites/Backgrounds/Forest_Background/bg_forest_4.png" id="2_ii31p"]
+[ext_resource type="Texture2D" uid="uid://bm7a8q1judh6n" path="res://assets/sprites/2D Platformer Tileset/Sprites/Backgrounds/Forest_Background/bg_forest_3.png" id="3_7k2aj"]
+[ext_resource type="Texture2D" uid="uid://dsyqx5yi2mcw4" path="res://assets/sprites/2D Platformer Tileset/Sprites/Backgrounds/Forest_Background/bg_forest_2.png" id="4_amnpg"]
+[ext_resource type="Texture2D" uid="uid://ul2711lt8fci" path="res://assets/sprites/2D Platformer Tileset/Sprites/Backgrounds/Forest_Background/bg_forest_1.png" id="5_aa5o4"]
+
+[node name="ParalaxBackground" type="Node2D"]
+
+[node name="Parallax2D6" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 0.5)
+repeat_size = Vector2(3575, 0)
+
+[node name="bg_forest_5" type="Sprite2D" parent="Parallax2D6"]
+texture = ExtResource("1_h1npt")
+
+[node name="Parallax2D4" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.2, 0.9)
+repeat_size = Vector2(3575, 0)
+
+[node name="bg_forest_4" type="Sprite2D" parent="Parallax2D4"]
+texture = ExtResource("2_ii31p")
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.6, 0.9)
+repeat_size = Vector2(3575, 0)
+
+[node name="bg_forest_3" type="Sprite2D" parent="Parallax2D3"]
+texture = ExtResource("3_7k2aj")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.9, 0.9)
+scroll_offset = Vector2(-10, 10)
+repeat_size = Vector2(3575, 0)
+
+[node name="bg_forest_2" type="Sprite2D" parent="Parallax2D2"]
+texture = ExtResource("4_amnpg")
+
+[node name="Parallax2D1" type="Parallax2D" parent="."]
+repeat_size = Vector2(3575, 0)
+
+[node name="bg_forest_1" type="Sprite2D" parent="Parallax2D1"]
+texture = ExtResource("5_aa5o4")

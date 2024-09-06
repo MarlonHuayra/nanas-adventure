@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://5m5yfyu5nwda"]
+
+[ext_resource type="Texture2D" uid="uid://bimjr0a330bey" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/platform_4.png" id="1_3qm64"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_43qqg"]
+size = Vector2(260.689, 47)
+
+[node name="Platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3qm64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.05312e-06, -1)
+scale = Vector2(1.10476, 0.87772)
+shape = SubResource("RectangleShape2D_43qqg")
+one_way_collision = true

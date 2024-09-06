@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="nanasAdventure"
-run/main_scene="res://scenes/authentication.tscn"
+run/main_scene="res://scenes/ui/authenticationUI.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Music="*res://scenes/music.tscn"
+Music="*res://scenes/ui/music.tscn"
 Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
 
 [editor_plugins]

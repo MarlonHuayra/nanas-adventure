@@ -1,0 +1,171 @@
+[gd_scene load_steps=16 format=3 uid="uid://dbnimddyn6bq7"]
+
+[ext_resource type="Script" path="res://scripts/game/coin.gd" id="1_d3q4a"]
+[ext_resource type="Texture2D" uid="uid://xwu7bhomxo7n" path="res://assets/sprites/2D Platformer Tileset/Sprites/Animations/Coin/coin_1.png" id="2_u78xe"]
+[ext_resource type="Texture2D" uid="uid://csrxd33mrr4if" path="res://assets/sprites/2D Platformer Tileset/Sprites/Animations/Coin/coin_2.png" id="3_d6boy"]
+[ext_resource type="AudioStream" uid="uid://dvv1ygwkxwu7t" path="res://assets/sounds/coin.wav" id="3_khjrx"]
+[ext_resource type="Texture2D" uid="uid://5lil3gmc54je" path="res://assets/sprites/2D Platformer Tileset/Sprites/Animations/Coin/coin_3.png" id="4_xrb42"]
+[ext_resource type="Texture2D" uid="uid://dtnxrv1dfjh6" path="res://assets/sprites/2D Platformer Tileset/Sprites/Animations/Coin/coin_4.png" id="5_aeh56"]
+[ext_resource type="Texture2D" uid="uid://vgf2erjxnaww" path="res://assets/sprites/2D Platformer Tileset/Sprites/Animations/Coin/coin_5.png" id="6_4m1nm"]
+[ext_resource type="Texture2D" uid="uid://bfjy2yvyeg2lr" path="res://assets/sprites/2D Platformer Tileset/Sprites/Animations/Coin/coin_6.png" id="7_8su6x"]
+[ext_resource type="Texture2D" uid="uid://b52i14jnw3onq" path="res://assets/sprites/2D Platformer Tileset/Sprites/Animations/Coin/coin_7.png" id="8_p45t7"]
+[ext_resource type="Texture2D" uid="uid://c5dspf82jl4fw" path="res://assets/sprites/2D Platformer Tileset/Sprites/Animations/Coin/coin_8.png" id="9_cbpyg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o17i8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_u78xe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_d6boy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xrb42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_aeh56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4m1nm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8su6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p45t7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cbpyg")
+}],
+"loop": true,
+"name": &"coinRotation",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3iva3"]
+radius = 11.0
+
+[sub_resource type="Animation" id="Animation_8pa2g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PickUpSound:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_5t3kf"]
+resource_name = "pickup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PickUpSound:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8d4nv"]
+_data = {
+"RESET": SubResource("Animation_8pa2g"),
+"pickup": SubResource("Animation_5t3kf")
+}
+
+[node name="CoinArea2D" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_d3q4a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_o17i8")
+animation = &"coinRotation"
+autoplay = "coinRotation"
+frame = 5
+frame_progress = 0.361952
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3iva3")
+
+[node name="PickUpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_khjrx")
+volume_db = 5.0
+area_mask = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8d4nv")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
