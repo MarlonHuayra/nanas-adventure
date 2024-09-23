@@ -1,116 +1,136 @@
-[gd_scene load_steps=114 format=3 uid="uid://dqbihhd3mw43x"]
+[gd_scene load_steps=134 format=3 uid="uid://dqbihhd3mw43x"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_ngh06"]
-[ext_resource type="Texture2D" uid="uid://1lfv16hv3lxv" path="res://assets/sprites/nanasSprites/nanaIdle/0001.png" id="2_6681b"]
-[ext_resource type="Texture2D" uid="uid://des6v15kh6gwm" path="res://assets/sprites/nanasSprites/nanaIdle/0002.png" id="3_sm7n6"]
-[ext_resource type="Texture2D" uid="uid://c31swkh0uwyxg" path="res://assets/sprites/nanasSprites/nanaIdle/0003.png" id="4_7l2rb"]
-[ext_resource type="Texture2D" uid="uid://baesl7tfqpfjn" path="res://assets/sprites/nanasSprites/nanaIdle/0004.png" id="5_mfyuh"]
-[ext_resource type="Texture2D" uid="uid://y8weurc6mfar" path="res://assets/sprites/nanasSprites/nanaIdle/0005.png" id="6_cr7y7"]
-[ext_resource type="Texture2D" uid="uid://b13r4js1v1tk" path="res://assets/sprites/nanasSprites/nanaIdle/0006.png" id="7_kfat4"]
-[ext_resource type="Texture2D" uid="uid://bjl7wgeag6who" path="res://assets/sprites/nanasSprites/nanaIdle/0007.png" id="8_kwqx5"]
-[ext_resource type="Texture2D" uid="uid://bqt48gswjir2s" path="res://assets/sprites/nanasSprites/nanaIdle/0008.png" id="9_7vu78"]
-[ext_resource type="Texture2D" uid="uid://o41uo2o2vugl" path="res://assets/sprites/nanasSprites/nanaIdle/0009.png" id="10_ivlfd"]
-[ext_resource type="Texture2D" uid="uid://mok72stmgdgd" path="res://assets/sprites/nanasSprites/nanaIdle/0010.png" id="11_xpsgw"]
-[ext_resource type="Texture2D" uid="uid://de7p6gx17albt" path="res://assets/sprites/nanasSprites/nanaIdle/0011.png" id="12_3li88"]
-[ext_resource type="Texture2D" uid="uid://d15psu3yq7bfv" path="res://assets/sprites/nanasSprites/nanaIdle/0012.png" id="13_s2ruq"]
-[ext_resource type="Texture2D" uid="uid://bqow2c0jtxu6r" path="res://assets/sprites/nanasSprites/nanaIdle/0013.png" id="14_gft8r"]
-[ext_resource type="Texture2D" uid="uid://cld0c86jgck8y" path="res://assets/sprites/nanasSprites/nanaIdle/0014.png" id="15_3a2jy"]
-[ext_resource type="Texture2D" uid="uid://c3vdcpr7a6xbq" path="res://assets/sprites/nanasSprites/nanaIdle/0015.png" id="16_g5aw6"]
-[ext_resource type="Texture2D" uid="uid://d1t0dguob0kmm" path="res://assets/sprites/nanasSprites/nanaIdleB/0001.png" id="17_hvle3"]
-[ext_resource type="Texture2D" uid="uid://bb7ky43kiny5t" path="res://assets/sprites/nanasSprites/nanaIdleB/0002.png" id="18_cow56"]
-[ext_resource type="Texture2D" uid="uid://dks8k7rv0rtyh" path="res://assets/sprites/nanasSprites/nanaIdleB/0003.png" id="19_ph25j"]
-[ext_resource type="Texture2D" uid="uid://b4f8xgt5p7rln" path="res://assets/sprites/nanasSprites/nanaIdleB/0004.png" id="20_m53pu"]
-[ext_resource type="Texture2D" uid="uid://fo1q8k3e1j2q" path="res://assets/sprites/nanasSprites/nanaIdleB/0005.png" id="21_08tko"]
-[ext_resource type="Texture2D" uid="uid://5y50s5ng17w" path="res://assets/sprites/nanasSprites/nanaIdleB/0006.png" id="22_50tel"]
-[ext_resource type="Texture2D" uid="uid://d0rseig44limm" path="res://assets/sprites/nanasSprites/nanaIdleB/0007.png" id="23_8m3y1"]
-[ext_resource type="Texture2D" uid="uid://bfskevfvm3b74" path="res://assets/sprites/nanasSprites/nanaIdleB/0008.png" id="24_04h0c"]
-[ext_resource type="Texture2D" uid="uid://cgen22sk52sfi" path="res://assets/sprites/nanasSprites/nanaIdleB/0009.png" id="25_gohxj"]
-[ext_resource type="Texture2D" uid="uid://bubwm8383mr54" path="res://assets/sprites/nanasSprites/nanaIdleB/0010.png" id="26_hlcby"]
-[ext_resource type="Texture2D" uid="uid://evo635xwbawm" path="res://assets/sprites/nanasSprites/nanaIdleB/0011.png" id="27_sf4x1"]
-[ext_resource type="Texture2D" uid="uid://cnc8h3i8pyw5l" path="res://assets/sprites/nanasSprites/nanaIdleB/0012.png" id="28_eugw1"]
-[ext_resource type="Texture2D" uid="uid://bx7lwx4k8qi6h" path="res://assets/sprites/nanasSprites/nanaIdleB/0013.png" id="29_viohr"]
-[ext_resource type="Texture2D" uid="uid://ds8eog1amhhdp" path="res://assets/sprites/nanasSprites/nanaIdleB/0014.png" id="30_sv4q0"]
-[ext_resource type="Texture2D" uid="uid://cwwb1w7o747t8" path="res://assets/sprites/nanasSprites/nanaIdleB/0015.png" id="31_147q8"]
-[ext_resource type="Texture2D" uid="uid://c3gd7bvrxmd2u" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0001.png" id="32_12e6i"]
-[ext_resource type="Texture2D" uid="uid://d4chjy4doh5pf" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0002.png" id="33_g6x6t"]
-[ext_resource type="Texture2D" uid="uid://dj32e7iuxgieo" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0003.png" id="34_lhug7"]
-[ext_resource type="Texture2D" uid="uid://cqrp1ena2bvvt" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0004.png" id="35_h5h38"]
-[ext_resource type="Texture2D" uid="uid://dkrp0pht0mh2n" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0005.png" id="36_70ukp"]
-[ext_resource type="Texture2D" uid="uid://br2ku0gyf5rpo" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0006.png" id="37_3bjl3"]
-[ext_resource type="Texture2D" uid="uid://dpp2efc6txvlq" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0007.png" id="38_cnarb"]
-[ext_resource type="Texture2D" uid="uid://hy1huy2i8hb0" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0008.png" id="39_2wj2n"]
-[ext_resource type="Texture2D" uid="uid://dafm6edd5nyr5" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0009.png" id="40_aetv7"]
-[ext_resource type="Texture2D" uid="uid://bmxt0lrlov6fh" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0010.png" id="41_0d1ru"]
-[ext_resource type="Texture2D" uid="uid://c35fp7f4cxb08" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0011.png" id="42_hdkw7"]
-[ext_resource type="Texture2D" uid="uid://bg54o2j6hb4w6" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0012.png" id="43_yrbx7"]
-[ext_resource type="Texture2D" uid="uid://ds41vsoy58wy8" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0013.png" id="44_0kx8w"]
-[ext_resource type="Texture2D" uid="uid://dl2tqua15vxv7" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0014.png" id="45_sasth"]
-[ext_resource type="Texture2D" uid="uid://b7xl3w8nec3qh" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0015.png" id="46_jwkqm"]
-[ext_resource type="Texture2D" uid="uid://d17lryyrvoutp" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0016.png" id="47_7fbj6"]
-[ext_resource type="Texture2D" uid="uid://b7p7xnurh1oe3" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0017.png" id="48_amnyu"]
-[ext_resource type="Texture2D" uid="uid://dke2ybfkbum24" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0018.png" id="49_b14pl"]
-[ext_resource type="Texture2D" uid="uid://dib3mb3kin42j" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0019.png" id="50_qfr57"]
-[ext_resource type="Texture2D" uid="uid://2aje18n01us6" path="res://assets/sprites/nanasSprites/nanaJump/nanaJump0020.png" id="51_0e7uu"]
-[ext_resource type="Texture2D" uid="uid://cpn2qvgej14uy" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0001.png" id="52_1l76w"]
-[ext_resource type="Texture2D" uid="uid://q1mttxshlhur" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0001.png" id="52_15ohg"]
-[ext_resource type="Texture2D" uid="uid://coqbhgpmh00j7" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0002.png" id="53_4qm8l"]
-[ext_resource type="Texture2D" uid="uid://bt6w6xckyeag7" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0002.png" id="53_fh5pt"]
-[ext_resource type="Texture2D" uid="uid://8of8tlmuu382" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0003.png" id="54_3vkmd"]
-[ext_resource type="Texture2D" uid="uid://bufbh3qr8akhc" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0003.png" id="54_uoqw3"]
-[ext_resource type="Texture2D" uid="uid://c0rixkg4pjpd2" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0004.png" id="55_4fg0e"]
-[ext_resource type="Texture2D" uid="uid://bx5ninjtp4tme" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0004.png" id="55_h0e6x"]
-[ext_resource type="Texture2D" uid="uid://b4c1lg6rmho88" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0005.png" id="56_3skmj"]
-[ext_resource type="Texture2D" uid="uid://w25ouv2cqjcd" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0005.png" id="56_qoin3"]
-[ext_resource type="Texture2D" uid="uid://cm8d7y8glhcs1" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0006.png" id="57_4k068"]
-[ext_resource type="Texture2D" uid="uid://cp147qbtbwsiw" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0006.png" id="57_yrj76"]
-[ext_resource type="Texture2D" uid="uid://bsopf2xlnfcj7" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0007.png" id="58_i08vs"]
-[ext_resource type="Texture2D" uid="uid://kcars1stoefi" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0007.png" id="58_ksqgm"]
-[ext_resource type="Texture2D" uid="uid://c36eluoaykcms" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0008.png" id="59_6sxn7"]
-[ext_resource type="Texture2D" uid="uid://6im2walwf3rp" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0008.png" id="59_y0a68"]
-[ext_resource type="Texture2D" uid="uid://dihvcr2cymuqn" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0009.png" id="60_angso"]
-[ext_resource type="Texture2D" uid="uid://c8q0irhwof1x1" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0009.png" id="60_uphms"]
-[ext_resource type="Texture2D" uid="uid://cmgftenv2hv0t" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0010.png" id="61_ls3qv"]
-[ext_resource type="Texture2D" uid="uid://6wymthckuhix" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0010.png" id="61_wlc6u"]
-[ext_resource type="Texture2D" uid="uid://cr6jsgw8q860n" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0011.png" id="62_2pb3m"]
-[ext_resource type="Texture2D" uid="uid://gnu8ckye1g2i" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0011.png" id="62_2s8a2"]
-[ext_resource type="Texture2D" uid="uid://dreabh4r7d77t" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0012.png" id="63_3wted"]
-[ext_resource type="Texture2D" uid="uid://bpppvjojex4gs" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0012.png" id="63_umu4s"]
-[ext_resource type="Texture2D" uid="uid://b66y70tt53n8r" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0013.png" id="64_61m0r"]
-[ext_resource type="Texture2D" uid="uid://dw6xol7j1u0n2" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0013.png" id="64_bts2o"]
-[ext_resource type="Texture2D" uid="uid://cee8o3fxbmkls" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0014.png" id="65_3n7k2"]
-[ext_resource type="Texture2D" uid="uid://2whbmgaagp3h" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0014.png" id="65_vls4p"]
-[ext_resource type="Texture2D" uid="uid://d37bdeljngyls" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0015.png" id="66_dbb0i"]
-[ext_resource type="Texture2D" uid="uid://cwsfgg1vxv7sa" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0015.png" id="66_qvjnt"]
-[ext_resource type="Texture2D" uid="uid://bhwqd1eipyoga" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0016.png" id="67_8xl6q"]
-[ext_resource type="Texture2D" uid="uid://clj1t1bw501a8" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0016.png" id="67_v5w3a"]
-[ext_resource type="Texture2D" uid="uid://ba5qm1i72l424" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0017.png" id="68_ihxon"]
-[ext_resource type="Texture2D" uid="uid://divu0p7lwkxuy" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0017.png" id="68_v608o"]
-[ext_resource type="Texture2D" uid="uid://x2o50wbtyd1w" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0018.png" id="69_4e26g"]
-[ext_resource type="Texture2D" uid="uid://b36t47rglrqvk" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0018.png" id="69_lpcmu"]
-[ext_resource type="Texture2D" uid="uid://fgsgyoippmlc" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0019.png" id="70_gj3fp"]
-[ext_resource type="Texture2D" uid="uid://pvfs3d7k1wa" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0019.png" id="70_o3l2w"]
-[ext_resource type="Texture2D" uid="uid://ehgbj42cyyjy" path="res://assets/sprites/nanasSprites/nanaRun/nanaRun0020.png" id="71_6eue8"]
-[ext_resource type="Texture2D" uid="uid://c0cbfbg7rsx8j" path="res://assets/sprites/nanasSprites/nanaJumpB/nanaJumpB0020.png" id="71_rafm3"]
-[ext_resource type="Texture2D" uid="uid://b28hlbkh1o7pk" path="res://assets/sprites/nanasSprites/nanaRunB/0001.png" id="72_g8wna"]
-[ext_resource type="Texture2D" uid="uid://b8t08i3tinnhv" path="res://assets/sprites/nanasSprites/nanaRunB/0002.png" id="73_31lon"]
-[ext_resource type="Texture2D" uid="uid://fcijvt0gvlw" path="res://assets/sprites/nanasSprites/nanaRunB/0003.png" id="74_ipm8b"]
-[ext_resource type="Texture2D" uid="uid://c3u4c464d7ocw" path="res://assets/sprites/nanasSprites/nanaRunB/0004.png" id="75_g0vnk"]
-[ext_resource type="Texture2D" uid="uid://cua2rld8shj6" path="res://assets/sprites/nanasSprites/nanaRunB/0005.png" id="76_q0pss"]
-[ext_resource type="Texture2D" uid="uid://bq7g67qe3es6g" path="res://assets/sprites/nanasSprites/nanaRunB/0006.png" id="77_yhsjs"]
-[ext_resource type="Texture2D" uid="uid://53xxjltdugow" path="res://assets/sprites/nanasSprites/nanaRunB/0007.png" id="78_vs7ll"]
-[ext_resource type="Texture2D" uid="uid://ij3daqvfk3am" path="res://assets/sprites/nanasSprites/nanaRunB/0008.png" id="79_dqjgm"]
-[ext_resource type="Texture2D" uid="uid://uo0jeap1qhiv" path="res://assets/sprites/nanasSprites/nanaRunB/0009.png" id="80_t5j20"]
-[ext_resource type="Texture2D" uid="uid://cr7cggu742lmh" path="res://assets/sprites/nanasSprites/nanaRunB/0010.png" id="81_ms2vh"]
-[ext_resource type="Texture2D" uid="uid://dc8d3kk155hgt" path="res://assets/sprites/nanasSprites/nanaRunB/0011.png" id="82_5deyg"]
-[ext_resource type="Texture2D" uid="uid://btgoo2a51r7ji" path="res://assets/sprites/nanasSprites/nanaRunB/0012.png" id="83_v1eks"]
-[ext_resource type="Texture2D" uid="uid://bkyxn2ihbgtg4" path="res://assets/sprites/nanasSprites/nanaRunB/0013.png" id="84_5eab1"]
-[ext_resource type="Texture2D" uid="uid://gmuew87v8ng6" path="res://assets/sprites/nanasSprites/nanaRunB/0014.png" id="85_ot51a"]
-[ext_resource type="Texture2D" uid="uid://bgratpie0hoes" path="res://assets/sprites/nanasSprites/nanaRunB/0015.png" id="86_1gswk"]
-[ext_resource type="Texture2D" uid="uid://cybk8m6s1nogr" path="res://assets/sprites/nanasSprites/nanaRunB/0016.png" id="87_elkeb"]
-[ext_resource type="Texture2D" uid="uid://d35w2pqvg5mu5" path="res://assets/sprites/nanasSprites/nanaRunB/0017.png" id="88_4lkbi"]
-[ext_resource type="Texture2D" uid="uid://cxyc2jfkwuave" path="res://assets/sprites/nanasSprites/nanaRunB/0018.png" id="89_lnod2"]
-[ext_resource type="Texture2D" uid="uid://je6f0xpjhkuc" path="res://assets/sprites/nanasSprites/nanaRunB/0019.png" id="90_34lpt"]
-[ext_resource type="Texture2D" uid="uid://bsh1gsco5f123" path="res://assets/sprites/nanasSprites/nanaRunB/0020.png" id="91_8w7f7"]
+[ext_resource type="Texture2D" uid="uid://1lfv16hv3lxv" path="res://assets/images/nanasSprites/nanaIdle/0001.png" id="2_6681b"]
+[ext_resource type="Texture2D" uid="uid://des6v15kh6gwm" path="res://assets/images/nanasSprites/nanaIdle/0002.png" id="3_sm7n6"]
+[ext_resource type="Texture2D" uid="uid://c31swkh0uwyxg" path="res://assets/images/nanasSprites/nanaIdle/0003.png" id="4_7l2rb"]
+[ext_resource type="Texture2D" uid="uid://baesl7tfqpfjn" path="res://assets/images/nanasSprites/nanaIdle/0004.png" id="5_mfyuh"]
+[ext_resource type="Texture2D" uid="uid://y8weurc6mfar" path="res://assets/images/nanasSprites/nanaIdle/0005.png" id="6_cr7y7"]
+[ext_resource type="Texture2D" uid="uid://b13r4js1v1tk" path="res://assets/images/nanasSprites/nanaIdle/0006.png" id="7_kfat4"]
+[ext_resource type="Texture2D" uid="uid://bjl7wgeag6who" path="res://assets/images/nanasSprites/nanaIdle/0007.png" id="8_kwqx5"]
+[ext_resource type="Texture2D" uid="uid://bqt48gswjir2s" path="res://assets/images/nanasSprites/nanaIdle/0008.png" id="9_7vu78"]
+[ext_resource type="Texture2D" uid="uid://o41uo2o2vugl" path="res://assets/images/nanasSprites/nanaIdle/0009.png" id="10_ivlfd"]
+[ext_resource type="Texture2D" uid="uid://mok72stmgdgd" path="res://assets/images/nanasSprites/nanaIdle/0010.png" id="11_xpsgw"]
+[ext_resource type="Texture2D" uid="uid://de7p6gx17albt" path="res://assets/images/nanasSprites/nanaIdle/0011.png" id="12_3li88"]
+[ext_resource type="Texture2D" uid="uid://d15psu3yq7bfv" path="res://assets/images/nanasSprites/nanaIdle/0012.png" id="13_s2ruq"]
+[ext_resource type="Texture2D" uid="uid://bqow2c0jtxu6r" path="res://assets/images/nanasSprites/nanaIdle/0013.png" id="14_gft8r"]
+[ext_resource type="Texture2D" uid="uid://cld0c86jgck8y" path="res://assets/images/nanasSprites/nanaIdle/0014.png" id="15_3a2jy"]
+[ext_resource type="Texture2D" uid="uid://c3vdcpr7a6xbq" path="res://assets/images/nanasSprites/nanaIdle/0015.png" id="16_g5aw6"]
+[ext_resource type="Texture2D" uid="uid://d1t0dguob0kmm" path="res://assets/images/nanasSprites/nanaIdleB/0001.png" id="17_hvle3"]
+[ext_resource type="Texture2D" uid="uid://bb7ky43kiny5t" path="res://assets/images/nanasSprites/nanaIdleB/0002.png" id="18_cow56"]
+[ext_resource type="Texture2D" uid="uid://dks8k7rv0rtyh" path="res://assets/images/nanasSprites/nanaIdleB/0003.png" id="19_ph25j"]
+[ext_resource type="Texture2D" uid="uid://b4f8xgt5p7rln" path="res://assets/images/nanasSprites/nanaIdleB/0004.png" id="20_m53pu"]
+[ext_resource type="Texture2D" uid="uid://fo1q8k3e1j2q" path="res://assets/images/nanasSprites/nanaIdleB/0005.png" id="21_08tko"]
+[ext_resource type="Texture2D" uid="uid://5y50s5ng17w" path="res://assets/images/nanasSprites/nanaIdleB/0006.png" id="22_50tel"]
+[ext_resource type="Texture2D" uid="uid://d0rseig44limm" path="res://assets/images/nanasSprites/nanaIdleB/0007.png" id="23_8m3y1"]
+[ext_resource type="Texture2D" uid="uid://bfskevfvm3b74" path="res://assets/images/nanasSprites/nanaIdleB/0008.png" id="24_04h0c"]
+[ext_resource type="Texture2D" uid="uid://cgen22sk52sfi" path="res://assets/images/nanasSprites/nanaIdleB/0009.png" id="25_gohxj"]
+[ext_resource type="Texture2D" uid="uid://bubwm8383mr54" path="res://assets/images/nanasSprites/nanaIdleB/0010.png" id="26_hlcby"]
+[ext_resource type="Texture2D" uid="uid://evo635xwbawm" path="res://assets/images/nanasSprites/nanaIdleB/0011.png" id="27_sf4x1"]
+[ext_resource type="Texture2D" uid="uid://cnc8h3i8pyw5l" path="res://assets/images/nanasSprites/nanaIdleB/0012.png" id="28_eugw1"]
+[ext_resource type="Texture2D" uid="uid://bx7lwx4k8qi6h" path="res://assets/images/nanasSprites/nanaIdleB/0013.png" id="29_viohr"]
+[ext_resource type="Texture2D" uid="uid://ds8eog1amhhdp" path="res://assets/images/nanasSprites/nanaIdleB/0014.png" id="30_sv4q0"]
+[ext_resource type="Texture2D" uid="uid://cwwb1w7o747t8" path="res://assets/images/nanasSprites/nanaIdleB/0015.png" id="31_147q8"]
+[ext_resource type="Texture2D" uid="uid://c3gd7bvrxmd2u" path="res://assets/images/nanasSprites/nanaJump/nanaJump0001.png" id="32_12e6i"]
+[ext_resource type="Texture2D" uid="uid://qdke0jbao0lu" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0001.png" id="32_kyqxs"]
+[ext_resource type="Texture2D" uid="uid://d4chjy4doh5pf" path="res://assets/images/nanasSprites/nanaJump/nanaJump0002.png" id="33_g6x6t"]
+[ext_resource type="Texture2D" uid="uid://bo7h255s7a27c" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0002.png" id="33_qarhc"]
+[ext_resource type="Texture2D" uid="uid://d3i5q1w6upnhg" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0003.png" id="34_304fk"]
+[ext_resource type="Texture2D" uid="uid://dj32e7iuxgieo" path="res://assets/images/nanasSprites/nanaJump/nanaJump0003.png" id="34_lhug7"]
+[ext_resource type="Texture2D" uid="uid://cqrp1ena2bvvt" path="res://assets/images/nanasSprites/nanaJump/nanaJump0004.png" id="35_h5h38"]
+[ext_resource type="Texture2D" uid="uid://b2d3jw27wqc5r" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0004.png" id="35_x43w3"]
+[ext_resource type="Texture2D" uid="uid://c8kkiee1qqmjj" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0005.png" id="36_8ykmt"]
+[ext_resource type="Texture2D" uid="uid://dkrp0pht0mh2n" path="res://assets/images/nanasSprites/nanaJump/nanaJump0005.png" id="36_70ukp"]
+[ext_resource type="Texture2D" uid="uid://br2ku0gyf5rpo" path="res://assets/images/nanasSprites/nanaJump/nanaJump0006.png" id="37_3bjl3"]
+[ext_resource type="Texture2D" uid="uid://0678bexvtqak" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0006.png" id="37_nh3ps"]
+[ext_resource type="Texture2D" uid="uid://dpp2efc6txvlq" path="res://assets/images/nanasSprites/nanaJump/nanaJump0007.png" id="38_cnarb"]
+[ext_resource type="Texture2D" uid="uid://dabq57hlqogc1" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0007.png" id="38_f7ji6"]
+[ext_resource type="Texture2D" uid="uid://hy1huy2i8hb0" path="res://assets/images/nanasSprites/nanaJump/nanaJump0008.png" id="39_2wj2n"]
+[ext_resource type="Texture2D" uid="uid://csa4lur3nni0n" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0008.png" id="39_5qxng"]
+[ext_resource type="Texture2D" uid="uid://dafm6edd5nyr5" path="res://assets/images/nanasSprites/nanaJump/nanaJump0009.png" id="40_aetv7"]
+[ext_resource type="Texture2D" uid="uid://ds31jrpgc7nna" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0009.png" id="40_wtt0u"]
+[ext_resource type="Texture2D" uid="uid://bmxt0lrlov6fh" path="res://assets/images/nanasSprites/nanaJump/nanaJump0010.png" id="41_0d1ru"]
+[ext_resource type="Texture2D" uid="uid://dm7n35tm40hqd" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0010.png" id="41_8a6hk"]
+[ext_resource type="Texture2D" uid="uid://c35fp7f4cxb08" path="res://assets/images/nanasSprites/nanaJump/nanaJump0011.png" id="42_hdkw7"]
+[ext_resource type="Texture2D" uid="uid://ncbuarlijd15" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0011.png" id="42_odjee"]
+[ext_resource type="Texture2D" uid="uid://ccnich5lpm0gw" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0012.png" id="43_ki81b"]
+[ext_resource type="Texture2D" uid="uid://bg54o2j6hb4w6" path="res://assets/images/nanasSprites/nanaJump/nanaJump0012.png" id="43_yrbx7"]
+[ext_resource type="Texture2D" uid="uid://ds41vsoy58wy8" path="res://assets/images/nanasSprites/nanaJump/nanaJump0013.png" id="44_0kx8w"]
+[ext_resource type="Texture2D" uid="uid://hnanul8apge5" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0013.png" id="44_66772"]
+[ext_resource type="Texture2D" uid="uid://ve4talf38gj3" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0014.png" id="45_clmlj"]
+[ext_resource type="Texture2D" uid="uid://dl2tqua15vxv7" path="res://assets/images/nanasSprites/nanaJump/nanaJump0014.png" id="45_sasth"]
+[ext_resource type="Texture2D" uid="uid://b7xl3w8nec3qh" path="res://assets/images/nanasSprites/nanaJump/nanaJump0015.png" id="46_jwkqm"]
+[ext_resource type="Texture2D" uid="uid://v2kan2abid1a" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0015.png" id="46_lo8r1"]
+[ext_resource type="Texture2D" uid="uid://d17lryyrvoutp" path="res://assets/images/nanasSprites/nanaJump/nanaJump0016.png" id="47_7fbj6"]
+[ext_resource type="Texture2D" uid="uid://ck4i1man7fw5w" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0016.png" id="47_7stad"]
+[ext_resource type="Texture2D" uid="uid://bpt4d8ejep2b6" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0017.png" id="48_34e0l"]
+[ext_resource type="Texture2D" uid="uid://b7p7xnurh1oe3" path="res://assets/images/nanasSprites/nanaJump/nanaJump0017.png" id="48_amnyu"]
+[ext_resource type="Texture2D" uid="uid://dke2ybfkbum24" path="res://assets/images/nanasSprites/nanaJump/nanaJump0018.png" id="49_b14pl"]
+[ext_resource type="Texture2D" uid="uid://2mctairdnmeb" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0018.png" id="49_je0or"]
+[ext_resource type="Texture2D" uid="uid://dib3mb3kin42j" path="res://assets/images/nanasSprites/nanaJump/nanaJump0019.png" id="50_qfr57"]
+[ext_resource type="Texture2D" uid="uid://25eoyn07owmi" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0019.png" id="50_yjy3t"]
+[ext_resource type="Texture2D" uid="uid://2aje18n01us6" path="res://assets/images/nanasSprites/nanaJump/nanaJump0020.png" id="51_0e7uu"]
+[ext_resource type="Texture2D" uid="uid://dcnkw657im07g" path="res://assets/images/nanasSprites/nanaIdleGetObject/nanaIdleObject0020.png" id="51_ncie7"]
+[ext_resource type="Texture2D" uid="uid://cpn2qvgej14uy" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0001.png" id="52_1l76w"]
+[ext_resource type="Texture2D" uid="uid://q1mttxshlhur" path="res://assets/images/nanasSprites/nanaRun/nanaRun0001.png" id="52_15ohg"]
+[ext_resource type="Texture2D" uid="uid://coqbhgpmh00j7" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0002.png" id="53_4qm8l"]
+[ext_resource type="Texture2D" uid="uid://bt6w6xckyeag7" path="res://assets/images/nanasSprites/nanaRun/nanaRun0002.png" id="53_fh5pt"]
+[ext_resource type="Texture2D" uid="uid://8of8tlmuu382" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0003.png" id="54_3vkmd"]
+[ext_resource type="Texture2D" uid="uid://bufbh3qr8akhc" path="res://assets/images/nanasSprites/nanaRun/nanaRun0003.png" id="54_uoqw3"]
+[ext_resource type="Texture2D" uid="uid://c0rixkg4pjpd2" path="res://assets/images/nanasSprites/nanaRun/nanaRun0004.png" id="55_4fg0e"]
+[ext_resource type="Texture2D" uid="uid://bx5ninjtp4tme" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0004.png" id="55_h0e6x"]
+[ext_resource type="Texture2D" uid="uid://b4c1lg6rmho88" path="res://assets/images/nanasSprites/nanaRun/nanaRun0005.png" id="56_3skmj"]
+[ext_resource type="Texture2D" uid="uid://w25ouv2cqjcd" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0005.png" id="56_qoin3"]
+[ext_resource type="Texture2D" uid="uid://cm8d7y8glhcs1" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0006.png" id="57_4k068"]
+[ext_resource type="Texture2D" uid="uid://cp147qbtbwsiw" path="res://assets/images/nanasSprites/nanaRun/nanaRun0006.png" id="57_yrj76"]
+[ext_resource type="Texture2D" uid="uid://bsopf2xlnfcj7" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0007.png" id="58_i08vs"]
+[ext_resource type="Texture2D" uid="uid://kcars1stoefi" path="res://assets/images/nanasSprites/nanaRun/nanaRun0007.png" id="58_ksqgm"]
+[ext_resource type="Texture2D" uid="uid://c36eluoaykcms" path="res://assets/images/nanasSprites/nanaRun/nanaRun0008.png" id="59_6sxn7"]
+[ext_resource type="Texture2D" uid="uid://6im2walwf3rp" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0008.png" id="59_y0a68"]
+[ext_resource type="Texture2D" uid="uid://dihvcr2cymuqn" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0009.png" id="60_angso"]
+[ext_resource type="Texture2D" uid="uid://c8q0irhwof1x1" path="res://assets/images/nanasSprites/nanaRun/nanaRun0009.png" id="60_uphms"]
+[ext_resource type="Texture2D" uid="uid://cmgftenv2hv0t" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0010.png" id="61_ls3qv"]
+[ext_resource type="Texture2D" uid="uid://6wymthckuhix" path="res://assets/images/nanasSprites/nanaRun/nanaRun0010.png" id="61_wlc6u"]
+[ext_resource type="Texture2D" uid="uid://cr6jsgw8q860n" path="res://assets/images/nanasSprites/nanaRun/nanaRun0011.png" id="62_2pb3m"]
+[ext_resource type="Texture2D" uid="uid://gnu8ckye1g2i" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0011.png" id="62_2s8a2"]
+[ext_resource type="Texture2D" uid="uid://dreabh4r7d77t" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0012.png" id="63_3wted"]
+[ext_resource type="Texture2D" uid="uid://bpppvjojex4gs" path="res://assets/images/nanasSprites/nanaRun/nanaRun0012.png" id="63_umu4s"]
+[ext_resource type="Texture2D" uid="uid://b66y70tt53n8r" path="res://assets/images/nanasSprites/nanaRun/nanaRun0013.png" id="64_61m0r"]
+[ext_resource type="Texture2D" uid="uid://dw6xol7j1u0n2" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0013.png" id="64_bts2o"]
+[ext_resource type="Texture2D" uid="uid://cee8o3fxbmkls" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0014.png" id="65_3n7k2"]
+[ext_resource type="Texture2D" uid="uid://2whbmgaagp3h" path="res://assets/images/nanasSprites/nanaRun/nanaRun0014.png" id="65_vls4p"]
+[ext_resource type="Texture2D" uid="uid://d37bdeljngyls" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0015.png" id="66_dbb0i"]
+[ext_resource type="Texture2D" uid="uid://cwsfgg1vxv7sa" path="res://assets/images/nanasSprites/nanaRun/nanaRun0015.png" id="66_qvjnt"]
+[ext_resource type="Texture2D" uid="uid://bhwqd1eipyoga" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0016.png" id="67_8xl6q"]
+[ext_resource type="Texture2D" uid="uid://clj1t1bw501a8" path="res://assets/images/nanasSprites/nanaRun/nanaRun0016.png" id="67_v5w3a"]
+[ext_resource type="Texture2D" uid="uid://ba5qm1i72l424" path="res://assets/images/nanasSprites/nanaRun/nanaRun0017.png" id="68_ihxon"]
+[ext_resource type="Texture2D" uid="uid://divu0p7lwkxuy" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0017.png" id="68_v608o"]
+[ext_resource type="Texture2D" uid="uid://x2o50wbtyd1w" path="res://assets/images/nanasSprites/nanaRun/nanaRun0018.png" id="69_4e26g"]
+[ext_resource type="Texture2D" uid="uid://b36t47rglrqvk" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0018.png" id="69_lpcmu"]
+[ext_resource type="Texture2D" uid="uid://fgsgyoippmlc" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0019.png" id="70_gj3fp"]
+[ext_resource type="Texture2D" uid="uid://pvfs3d7k1wa" path="res://assets/images/nanasSprites/nanaRun/nanaRun0019.png" id="70_o3l2w"]
+[ext_resource type="Texture2D" uid="uid://ehgbj42cyyjy" path="res://assets/images/nanasSprites/nanaRun/nanaRun0020.png" id="71_6eue8"]
+[ext_resource type="Texture2D" uid="uid://c0cbfbg7rsx8j" path="res://assets/images/nanasSprites/nanaJumpB/nanaJumpB0020.png" id="71_rafm3"]
+[ext_resource type="Texture2D" uid="uid://b28hlbkh1o7pk" path="res://assets/images/nanasSprites/nanaRunB/0001.png" id="72_g8wna"]
+[ext_resource type="Texture2D" uid="uid://b8t08i3tinnhv" path="res://assets/images/nanasSprites/nanaRunB/0002.png" id="73_31lon"]
+[ext_resource type="Texture2D" uid="uid://fcijvt0gvlw" path="res://assets/images/nanasSprites/nanaRunB/0003.png" id="74_ipm8b"]
+[ext_resource type="Texture2D" uid="uid://c3u4c464d7ocw" path="res://assets/images/nanasSprites/nanaRunB/0004.png" id="75_g0vnk"]
+[ext_resource type="Texture2D" uid="uid://cua2rld8shj6" path="res://assets/images/nanasSprites/nanaRunB/0005.png" id="76_q0pss"]
+[ext_resource type="Texture2D" uid="uid://bq7g67qe3es6g" path="res://assets/images/nanasSprites/nanaRunB/0006.png" id="77_yhsjs"]
+[ext_resource type="Texture2D" uid="uid://53xxjltdugow" path="res://assets/images/nanasSprites/nanaRunB/0007.png" id="78_vs7ll"]
+[ext_resource type="Texture2D" uid="uid://ij3daqvfk3am" path="res://assets/images/nanasSprites/nanaRunB/0008.png" id="79_dqjgm"]
+[ext_resource type="Texture2D" uid="uid://uo0jeap1qhiv" path="res://assets/images/nanasSprites/nanaRunB/0009.png" id="80_t5j20"]
+[ext_resource type="Texture2D" uid="uid://cr7cggu742lmh" path="res://assets/images/nanasSprites/nanaRunB/0010.png" id="81_ms2vh"]
+[ext_resource type="Texture2D" uid="uid://dc8d3kk155hgt" path="res://assets/images/nanasSprites/nanaRunB/0011.png" id="82_5deyg"]
+[ext_resource type="Texture2D" uid="uid://btgoo2a51r7ji" path="res://assets/images/nanasSprites/nanaRunB/0012.png" id="83_v1eks"]
+[ext_resource type="Texture2D" uid="uid://bkyxn2ihbgtg4" path="res://assets/images/nanasSprites/nanaRunB/0013.png" id="84_5eab1"]
+[ext_resource type="Texture2D" uid="uid://gmuew87v8ng6" path="res://assets/images/nanasSprites/nanaRunB/0014.png" id="85_ot51a"]
+[ext_resource type="Texture2D" uid="uid://bgratpie0hoes" path="res://assets/images/nanasSprites/nanaRunB/0015.png" id="86_1gswk"]
+[ext_resource type="Texture2D" uid="uid://cybk8m6s1nogr" path="res://assets/images/nanasSprites/nanaRunB/0016.png" id="87_elkeb"]
+[ext_resource type="Texture2D" uid="uid://d35w2pqvg5mu5" path="res://assets/images/nanasSprites/nanaRunB/0017.png" id="88_4lkbi"]
+[ext_resource type="Texture2D" uid="uid://cxyc2jfkwuave" path="res://assets/images/nanasSprites/nanaRunB/0018.png" id="89_lnod2"]
+[ext_resource type="Texture2D" uid="uid://je6f0xpjhkuc" path="res://assets/images/nanasSprites/nanaRunB/0019.png" id="90_34lpt"]
+[ext_resource type="Texture2D" uid="uid://bsh1gsco5f123" path="res://assets/images/nanasSprites/nanaRunB/0020.png" id="91_8w7f7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6wlvr"]
 animations = [{
@@ -213,6 +233,71 @@ animations = [{
 "loop": true,
 "name": &"nanaIdleB",
 "speed": 27.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_kyqxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_qarhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_304fk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_x43w3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_8ykmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_nh3ps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_f7ji6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_5qxng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_wtt0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_8a6hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_odjee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ki81b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_66772")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_clmlj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_lo8r1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_7stad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_34e0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_je0or")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_yjy3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ncie7")
+}],
+"loop": true,
+"name": &"nanaIdleGetObjet",
+"speed": 24.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -549,7 +634,9 @@ script = ExtResource("1_ngh06")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(7, 10)
 sprite_frames = SubResource("SpriteFrames_6wlvr")
-animation = &"nanaIdle"
+animation = &"nanaIdleGetObjet"
+autoplay = "nanaIdleGetObjet"
+frame_progress = 0.515272
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(21.5, 48.5)

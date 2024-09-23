@@ -24,6 +24,10 @@ Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
 
 enabled=PackedStringArray("res://addons/godot-firebase/plugin.cfg", "res://addons/http-sse-client/plugin.cfg")
 
+[gui]
+
+theme/custom="res://resources/default_theme.tres"
+
 [input]
 
 jump={

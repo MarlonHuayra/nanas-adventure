@@ -11,4 +11,4 @@ func add_point():
 
 func _on_logout_button_pressed():
 	Firebase.Auth.logout()
-	get_tree().change_scene_to_file("res://scenes/authentication.tscn")
+	get_tree().change_scene_to_file("res://scenes/ui/authenticationUI.tscn")

@@ -1,15 +1,16 @@
 [gd_scene load_steps=16 format=3 uid="uid://dbnimddyn6bq7"]
 
 [ext_resource type="Script" path="res://scripts/game/coin.gd" id="1_d3q4a"]
-[ext_resource type="Texture2D" uid="uid://xwu7bhomxo7n" path="res://assets/sprites/2D Platformer Tileset/Sprites/Animations/Coin/coin_1.png" id="2_u78xe"]
-[ext_resource type="Texture2D" uid="uid://csrxd33mrr4if" path="res://assets/sprites/2D Platformer Tileset/Sprites/Animations/Coin/coin_2.png" id="3_d6boy"]
+[ext_resource type="Texture2D" uid="uid://xwu7bhomxo7n" path="res://assets/images/2D Platformer Tileset/Sprites/Animations/Coin/coin_1.png" id="2_u78xe"]
+[ext_resource type="Texture2D" uid="uid://csrxd33mrr4if" path="res://assets/images/2D Platformer Tileset/Sprites/Animations/Coin/coin_2.png" id="3_d6boy"]
 [ext_resource type="AudioStream" uid="uid://dvv1ygwkxwu7t" path="res://assets/sounds/coin.wav" id="3_khjrx"]
-[ext_resource type="Texture2D" uid="uid://5lil3gmc54je" path="res://assets/sprites/2D Platformer Tileset/Sprites/Animations/Coin/coin_3.png" id="4_xrb42"]
-[ext_resource type="Texture2D" uid="uid://dtnxrv1dfjh6" path="res://assets/sprites/2D Platformer Tileset/Sprites/Animations/Coin/coin_4.png" id="5_aeh56"]
-[ext_resource type="Texture2D" uid="uid://vgf2erjxnaww" path="res://assets/sprites/2D Platformer Tileset/Sprites/Animations/Coin/coin_5.png" id="6_4m1nm"]
-[ext_resource type="Texture2D" uid="uid://bfjy2yvyeg2lr" path="res://assets/sprites/2D Platformer Tileset/Sprites/Animations/Coin/coin_6.png" id="7_8su6x"]
-[ext_resource type="Texture2D" uid="uid://b52i14jnw3onq" path="res://assets/sprites/2D Platformer Tileset/Sprites/Animations/Coin/coin_7.png" id="8_p45t7"]
-[ext_resource type="Texture2D" uid="uid://c5dspf82jl4fw" path="res://assets/sprites/2D Platformer Tileset/Sprites/Animations/Coin/coin_8.png" id="9_cbpyg"]
+[ext_resource type="Texture2D" uid="uid://5lil3gmc54je" path="res://assets/images/2D Platformer Tileset/Sprites/Animations/Coin/coin_3.png" id="4_xrb42"]
+[ext_resource type="Texture2D" uid="uid://dtnxrv1dfjh6" path="res://assets/images/2D Platformer Tileset/Sprites/Animations/Coin/coin_4.png" id="5_aeh56"]
+[ext_resource type="Texture2D" uid="uid://vgf2erjxnaww" path="res://assets/images/2D Platformer Tileset/Sprites/Animations/Coin/coin_5.png" id="6_4m1nm"]
+[ext_resource type="Texture2D" uid="uid://bfjy2yvyeg2lr" path="res://assets/images/2D Platformer Tileset/Sprites/Animations/Coin/coin_6.png" id="7_8su6x"]
+[ext_resource type="Texture2D" uid="uid://b52i14jnw3onq" path="res://assets/images/2D Platformer Tileset/Sprites/Animations/Coin/coin_7.png" id="8_p45t7"]
+[ext_resource type="Texture2D" uid="uid://c5dspf82jl4fw" path="res://assets/images/2D Platformer Tileset/Sprites/Animations/Coin/coin_8.png" id="9_cbpyg"]
+
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o17i8"]
 animations = [{

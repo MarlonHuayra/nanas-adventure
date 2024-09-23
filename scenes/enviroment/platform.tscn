@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://5m5yfyu5nwda"]
 
-[ext_resource type="Texture2D" uid="uid://bimjr0a330bey" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/platform_4.png" id="1_3qm64"]
+[ext_resource type="Texture2D" uid="uid://bimjr0a330bey" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/platform_4.png" id="1_3qm64"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_43qqg"]
 size = Vector2(260.689, 47)

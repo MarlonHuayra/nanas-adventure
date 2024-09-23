@@ -1,0 +1,221 @@
+[gd_scene load_steps=28 format=3 uid="uid://13r5vwevdnx7"]
+
+[ext_resource type="Script" path="res://scripts/game/coin.gd" id="1_ssa1j"]
+[ext_resource type="Texture2D" uid="uid://c306rq3sf7jbc" path="res://assets/images/semillaIdle/semillaIdle0001.png" id="2_0k4s4"]
+[ext_resource type="Texture2D" uid="uid://bt0js8yriyecy" path="res://assets/images/semillaIdle/semillaIdle0002.png" id="3_qv3my"]
+[ext_resource type="Texture2D" uid="uid://ccj4ur0avfeur" path="res://assets/images/semillaIdle/semillaIdle0003.png" id="4_h7y65"]
+[ext_resource type="Texture2D" uid="uid://dc3wfwg5p75no" path="res://assets/images/semillaIdle/semillaIdle0004.png" id="5_2r4ws"]
+[ext_resource type="Texture2D" uid="uid://dftw2svq7loq5" path="res://assets/images/semillaIdle/semillaIdle0005.png" id="6_vyo46"]
+[ext_resource type="Texture2D" uid="uid://bgsiym4mlq4a8" path="res://assets/images/semillaIdle/semillaIdle0006.png" id="7_6t1ng"]
+[ext_resource type="Texture2D" uid="uid://b8iqr2byhtyf2" path="res://assets/images/semillaIdle/semillaIdle0007.png" id="8_koukx"]
+[ext_resource type="Texture2D" uid="uid://chtn7h63bqmsj" path="res://assets/images/semillaIdle/semillaIdle0008.png" id="9_hju17"]
+[ext_resource type="AudioStream" uid="uid://dvv1ygwkxwu7t" path="res://assets/sounds/coin.wav" id="10_jxkeg"]
+[ext_resource type="Texture2D" uid="uid://dwfnhk2ls2ed2" path="res://assets/images/semillaIdle/semillaIdle0009.png" id="10_mp4cp"]
+[ext_resource type="Texture2D" uid="uid://b2qeucp7agxxp" path="res://assets/images/semillaIdle/semillaIdle0010.png" id="11_s1ews"]
+[ext_resource type="Texture2D" uid="uid://b8o4jli26ard" path="res://assets/images/semillaIdle/semillaIdle0011.png" id="12_apq52"]
+[ext_resource type="Texture2D" uid="uid://bsloalxrvuxja" path="res://assets/images/semillaIdle/semillaIdle0012.png" id="13_ulcn6"]
+[ext_resource type="Texture2D" uid="uid://cbfpr31s71ely" path="res://assets/images/semillaIdle/semillaIdle0013.png" id="14_pb08f"]
+[ext_resource type="Texture2D" uid="uid://cgutb8r4iv33h" path="res://assets/images/semillaIdle/semillaIdle0014.png" id="15_evhl2"]
+[ext_resource type="Texture2D" uid="uid://cstxmk8ix71ia" path="res://assets/images/semillaIdle/semillaIdle0015.png" id="16_bo04q"]
+[ext_resource type="Texture2D" uid="uid://0xkk3avjqp8v" path="res://assets/images/semillaIdle/semillaIdle0016.png" id="17_hrumu"]
+[ext_resource type="Texture2D" uid="uid://bxbuckt72gekw" path="res://assets/images/semillaIdle/semillaIdle0017.png" id="18_hbxxp"]
+[ext_resource type="Texture2D" uid="uid://bd8gady1rx3d" path="res://assets/images/semillaIdle/semillaIdle0018.png" id="19_rlarh"]
+[ext_resource type="Texture2D" uid="uid://u5rlainsislg" path="res://assets/images/semillaIdle/semillaIdle0019.png" id="20_ayh1y"]
+[ext_resource type="Texture2D" uid="uid://b7mqa6m2sxjut" path="res://assets/images/semillaIdle/semillaIdle0020.png" id="21_rinuo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o17i8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0k4s4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qv3my")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h7y65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2r4ws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vyo46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6t1ng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_koukx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hju17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mp4cp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_s1ews")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_apq52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ulcn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_pb08f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_evhl2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_bo04q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hrumu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_hbxxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_rlarh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ayh1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_rinuo")
+}],
+"loop": true,
+"name": &"coinRotation",
+"speed": 20.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3iva3"]
+radius = 19.105
+
+[sub_resource type="Animation" id="Animation_8pa2g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PickUpSound:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_5t3kf"]
+resource_name = "pickup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PickUpSound:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8d4nv"]
+_data = {
+"RESET": SubResource("Animation_8pa2g"),
+"pickup": SubResource("Animation_5t3kf")
+}
+
+[node name="SeedArea2D" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_ssa1j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -13)
+sprite_frames = SubResource("SpriteFrames_o17i8")
+animation = &"coinRotation"
+autoplay = "coinRotation"
+frame_progress = 0.203316
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(1.09432, 1.09432)
+shape = SubResource("CircleShape2D_3iva3")
+
+[node name="PickUpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_jxkeg")
+volume_db = 5.0
+area_mask = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8d4nv")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,40 +1,41 @@
-[gd_scene load_steps=42 format=4 uid="uid://f6mvo3846fji"]
+[gd_scene load_steps=43 format=4 uid="uid://f6mvo3846fji"]
 
+[ext_resource type="Texture2D" uid="uid://dmnyduanslp8i" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_pause.png" id="1_ixabf"]
 [ext_resource type="PackedScene" uid="uid://bfaju0ynypchb" path="res://scenes/enviroment/paralaxBackground.tscn" id="1_n13u0"]
 [ext_resource type="Script" path="res://scripts/game/game_manager.gd" id="1_xxwlj"]
-[ext_resource type="Texture2D" uid="uid://ci1cw0hu1qtt7" path="res://assets/sprites/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_category.png" id="2_y3qob"]
-[ext_resource type="FontFile" uid="uid://h6kkifhjhpub" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_yodje"]
-[ext_resource type="Texture2D" uid="uid://qm7jcihy8tkh" path="res://assets/sprites/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_big_coin.png" id="3_5hhba"]
+[ext_resource type="Texture2D" uid="uid://qm7jcihy8tkh" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_big_coin.png" id="3_5hhba"]
 [ext_resource type="PackedScene" uid="uid://dqbihhd3mw43x" path="res://scenes/characters/player.tscn" id="3_74tqp"]
 [ext_resource type="PackedScene" uid="uid://cib4t41c15tt1" path="res://scenes/enviroment/killzone.tscn" id="4_3h2ls"]
-[ext_resource type="Texture2D" uid="uid://coslxpm86wsyh" path="res://assets/sprites/2D Platformer Tileset/Simple UI Pack/Sprites/Stats/portrait.png" id="4_ts3av"]
-[ext_resource type="Texture2D" uid="uid://dc14nnu3khhxv" path="res://assets/sprites/nanasSprites/nanaBodyParts/HEADBEST.png" id="5_7saka"]
+[ext_resource type="Texture2D" uid="uid://coslxpm86wsyh" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Stats/portrait.png" id="4_ts3av"]
+[ext_resource type="Texture2D" uid="uid://dc14nnu3khhxv" path="res://assets/images/nanasSprites/nanaBodyParts/HEADBEST.png" id="5_7saka"]
 [ext_resource type="PackedScene" uid="uid://dbnimddyn6bq7" path="res://scenes/enviroment/coin.tscn" id="5_w33ew"]
 [ext_resource type="PackedScene" uid="uid://5m5yfyu5nwda" path="res://scenes/enviroment/platform.tscn" id="6_cot81"]
-[ext_resource type="Texture2D" uid="uid://dw5qhka26y82t" path="res://assets/sprites/2D Platformer Tileset/Simple UI Pack/Sprites/Stats/heart_fill.png" id="6_silgf"]
-[ext_resource type="FontFile" uid="uid://bou85fh8wkrbn" path="res://assets/fonts/PixelOperator8.ttf" id="7_3um06"]
+[ext_resource type="Texture2D" uid="uid://dw5qhka26y82t" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Stats/heart_fill.png" id="6_silgf"]
+[ext_resource type="Texture2D" uid="uid://rhnrqlroqeou" path="res://assets/images/icons/semillaIcon.png" id="6_wqivq"]
+[ext_resource type="FontFile" uid="uid://bh1sdy0nwhbq7" path="res://assets/fonts/BD_Cartoon_Shout.ttf" id="7_3um06"]
 [ext_resource type="PackedScene" uid="uid://qj6m2njcuvbb" path="res://scenes/characters/slime.tscn" id="8_vrr8v"]
-[ext_resource type="Texture2D" uid="uid://cx88ttkthm5y5" path="res://assets/sprites/2D Platformer Tileset/Sprites/Tileset/tileset_1.png" id="9_vbssm"]
-[ext_resource type="Texture2D" uid="uid://bawvknu3ymjvf" path="res://assets/sprites/2D Platformer Tileset/Sprites/Backgrounds/Forest_Background/bg_forest_5.png" id="10_8o655"]
-[ext_resource type="Texture2D" uid="uid://wurfqkpcmjqg" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/Vegetations/bush.png" id="10_8wlrb"]
-[ext_resource type="Texture2D" uid="uid://ul2711lt8fci" path="res://assets/sprites/2D Platformer Tileset/Sprites/Backgrounds/Forest_Background/bg_forest_1.png" id="11_fabe1"]
-[ext_resource type="Texture2D" uid="uid://b1o74yoclukv4" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/Vegetations/flower_1.png" id="11_lbnlm"]
-[ext_resource type="Texture2D" uid="uid://dknm2efrqiwr1" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/Vegetations/beam.png" id="12_0ptct"]
-[ext_resource type="Texture2D" uid="uid://8i5durmdulji" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/Vegetations/bush_2.png" id="13_57168"]
-[ext_resource type="Texture2D" uid="uid://ckrp3qaoip45k" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/Vegetations/tree_4.png" id="14_5d4cf"]
-[ext_resource type="Texture2D" uid="uid://rbwdp5ba5vm4" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/Vegetations/mushroom_2.png" id="15_rornn"]
-[ext_resource type="Texture2D" uid="uid://b1rwvxe6bvvgu" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/Vegetations/bush_4.png" id="16_3od61"]
-[ext_resource type="Texture2D" uid="uid://cp4tqusuqaffl" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/Vegetations/tree_2.png" id="16_10i7v"]
-[ext_resource type="Texture2D" uid="uid://dhrjb21j6v7dr" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/Vegetations/bush_3.png" id="17_dsc4n"]
-[ext_resource type="Texture2D" uid="uid://brn7euiwcu5u3" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/Vegetations/tree_1.png" id="17_j4s5a"]
-[ext_resource type="Texture2D" uid="uid://jye7lf6htwl2" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/Vegetations/tree_3.png" id="18_0btak"]
-[ext_resource type="Texture2D" uid="uid://db1igccybucnb" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/Vegetations/pumpkin_2.png" id="18_5nc5c"]
-[ext_resource type="Texture2D" uid="uid://vhvqooxsmbpo" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/Vegetations/stone_1.png" id="19_23x80"]
-[ext_resource type="Texture2D" uid="uid://dq7m35afm8kbx" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/Vegetations/grass_5.png" id="20_k8p4o"]
-[ext_resource type="Texture2D" uid="uid://4me47wb47gvb" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/Buildings/house_3.png" id="20_q2s35"]
-[ext_resource type="Texture2D" uid="uid://cxxkucwoynx8o" path="res://assets/sprites/2D Platformer Tileset/Sprites/Objects/Vegetations/stump.png" id="21_32gsu"]
+[ext_resource type="Texture2D" uid="uid://cx88ttkthm5y5" path="res://assets/images/2D Platformer Tileset/Sprites/Tileset/tileset_1.png" id="9_vbssm"]
+[ext_resource type="Texture2D" uid="uid://bawvknu3ymjvf" path="res://assets/images/2D Platformer Tileset/Sprites/Backgrounds/Forest_Background/bg_forest_5.png" id="10_8o655"]
+[ext_resource type="Texture2D" uid="uid://wurfqkpcmjqg" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Vegetations/bush.png" id="10_8wlrb"]
+[ext_resource type="Texture2D" uid="uid://ul2711lt8fci" path="res://assets/images/2D Platformer Tileset/Sprites/Backgrounds/Forest_Background/bg_forest_1.png" id="11_fabe1"]
+[ext_resource type="Texture2D" uid="uid://b1o74yoclukv4" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Vegetations/flower_1.png" id="11_lbnlm"]
+[ext_resource type="Texture2D" uid="uid://dknm2efrqiwr1" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Vegetations/beam.png" id="12_0ptct"]
+[ext_resource type="Texture2D" uid="uid://8i5durmdulji" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Vegetations/bush_2.png" id="13_57168"]
+[ext_resource type="Texture2D" uid="uid://ckrp3qaoip45k" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Vegetations/tree_4.png" id="14_5d4cf"]
+[ext_resource type="Texture2D" uid="uid://rbwdp5ba5vm4" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Vegetations/mushroom_2.png" id="15_rornn"]
+[ext_resource type="Texture2D" uid="uid://b1rwvxe6bvvgu" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Vegetations/bush_4.png" id="16_3od61"]
+[ext_resource type="Texture2D" uid="uid://cp4tqusuqaffl" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Vegetations/tree_2.png" id="16_10i7v"]
+[ext_resource type="Texture2D" uid="uid://dhrjb21j6v7dr" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Vegetations/bush_3.png" id="17_dsc4n"]
+[ext_resource type="Texture2D" uid="uid://brn7euiwcu5u3" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Vegetations/tree_1.png" id="17_j4s5a"]
+[ext_resource type="Texture2D" uid="uid://jye7lf6htwl2" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Vegetations/tree_3.png" id="18_0btak"]
+[ext_resource type="Texture2D" uid="uid://db1igccybucnb" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Vegetations/pumpkin_2.png" id="18_5nc5c"]
+[ext_resource type="Texture2D" uid="uid://vhvqooxsmbpo" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Vegetations/stone_1.png" id="19_23x80"]
+[ext_resource type="Texture2D" uid="uid://dq7m35afm8kbx" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Vegetations/grass_5.png" id="20_k8p4o"]
+[ext_resource type="Texture2D" uid="uid://4me47wb47gvb" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Buildings/house_3.png" id="20_q2s35"]
+[ext_resource type="Texture2D" uid="uid://cxxkucwoynx8o" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Vegetations/stump.png" id="21_32gsu"]
+[ext_resource type="PackedScene" uid="uid://13r5vwevdnx7" path="res://scenes/enviroment/seed.tscn" id="30_0rybc"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ux33n"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hm768"]
 texture = ExtResource("9_vbssm")
 texture_region_size = Vector2i(256, 256)
 1:0/0 = 0
@@ -204,7 +205,7 @@ texture_region_size = Vector2i(256, 256)
 13:7/0 = 0
 13:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -128, 128, -128, 128, 128, -128, 128)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1vity"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_spa5t"]
 texture = ExtResource("10_8o655")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
@@ -260,7 +261,7 @@ texture_region_size = Vector2i(256, 256)
 11:3/0 = 0
 12:3/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ujxdr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wep06"]
 texture = ExtResource("11_fabe1")
 texture_region_size = Vector2i(256, 256)
 5:0/0 = 0
@@ -309,9 +310,9 @@ texture_region_size = Vector2i(256, 256)
 [sub_resource type="TileSet" id="TileSet_kfdks"]
 tile_size = Vector2i(256, 256)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ux33n")
-sources/1 = SubResource("TileSetAtlasSource_1vity")
-sources/2 = SubResource("TileSetAtlasSource_ujxdr")
+sources/0 = SubResource("TileSetAtlasSource_hm768")
+sources/1 = SubResource("TileSetAtlasSource_spa5t")
+sources/2 = SubResource("TileSetAtlasSource_wep06")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_aab18"]
 
@@ -357,18 +358,22 @@ _data = {
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
-[node name="LogoutButton" type="Button" parent="CanvasLayer2"]
-offset_left = 951.0
-offset_top = 128.0
-offset_right = 1013.0
-offset_bottom = 159.0
-scale = Vector2(2.46256, 1.7265)
-text = "Logout"
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -102.0
+offset_top = 50.0
+offset_right = -51.0
+offset_bottom = 103.0
+grow_horizontal = 0
+scale = Vector2(0.8, 0.796)
 
-[node name="IconSmallCategory" type="Sprite2D" parent="CanvasLayer2"]
-position = Vector2(1024, 78)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_y3qob")
+[node name="LogoutButton" type="Button" parent="CanvasLayer2/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonSmallCircle"
+icon = ExtResource("1_ixabf")
+icon_alignment = 1
 
 [node name="IconBigCoin" type="Sprite2D" parent="CanvasLayer2"]
 position = Vector2(78.2, 195.2)
@@ -405,8 +410,17 @@ offset_left = 114.2
 offset_top = 176.2
 offset_right = 200.2
 offset_bottom = 211.2
-theme_override_font_sizes/font_size = 25
-text = "x Coins
+theme_override_font_sizes/font_size = 20
+text = "0 Coins
+"
+
+[node name="LabelCoinsCount2" type="Label" parent="CanvasLayer2"]
+offset_left = 114.2
+offset_top = 226.0
+offset_right = 200.2
+offset_bottom = 261.0
+theme_override_font_sizes/font_size = 20
+text = "0 Seeds
 "
 
 [node name="Nanas Acventure" type="Label" parent="CanvasLayer2"]
@@ -418,6 +432,11 @@ theme_override_font_sizes/font_size = 25
 text = "Nanas Adventure : Welcome Marlon
 "
 
+[node name="SemillaIcon" type="Sprite2D" parent="CanvasLayer2"]
+position = Vector2(78, 242)
+scale = Vector2(0.226988, 0.226988)
+texture = ExtResource("6_wqivq")
+
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_xxwlj")
@@ -428,7 +447,7 @@ offset_top = -188.0
 offset_right = 753.0
 offset_bottom = -165.0
 theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
-theme_override_fonts/font = ExtResource("2_yodje")
+theme_override_fonts/font = ExtResource("7_3um06")
 theme_override_font_sizes/font_size = 8
 text = "You colected x coins!"
 horizontal_alignment = 1
@@ -638,6 +657,11 @@ position = Vector2(8130, -563)
 [node name="CoinArea2D14" parent="Coins" instance=ExtResource("5_w33ew")]
 position = Vector2(8250, -512)
 
+[node name="Seeds" type="Node" parent="."]
+
+[node name="SeedArea2D" parent="Seeds" instance=ExtResource("30_0rybc")]
+position = Vector2(115, -455)
+
 [node name="Platforms" type="Node" parent="."]
 
 [node name="Platform" parent="Platforms" instance=ExtResource("6_cot81")]
@@ -666,7 +690,7 @@ offset_top = 16.0
 offset_right = 608.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
-theme_override_fonts/font = ExtResource("2_yodje")
+theme_override_fonts/font = ExtResource("7_3um06")
 theme_override_font_sizes/font_size = 8
 text = "falling hurts"
 
@@ -711,9 +735,9 @@ position = Vector2(2304, 4)
 position = Vector2(-387, -612)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(19, -67)
+position = Vector2(18, -67)
 offset = Vector2(1, 1)
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[connection signal="pressed" from="CanvasLayer2/LogoutButton" to="GameManager" method="_on_logout_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/VBoxContainer/LogoutButton" to="GameManager" method="_on_logout_button_pressed"]

@@ -52,12 +52,16 @@ func on_signup_succeeded(auth):
 func on_login_failed(error_code, message):
 	print(error_code)
 	print(message)
-	%StateLabel.text = "Login failed. Error: %s" % message
+	%StateLabel.text = "Login failed"
 	
 func on_signup_failed(error_code, message):
 	print(error_code)
 	print(message)
-	%StateLabel.text = "Sign up failed. Error: %s" % message
+	%StateLabel.text = "Sign up failed"
 	
 func _change_scene():
 	get_tree().change_scene_to_file("res://scenes/levels/game.tscn")
+
+
+func _on_exit_button_pressed() -> void:
+	get_tree().quit()  # Finaliza el juego
