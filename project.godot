@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 Music="*res://scenes/ui/music.tscn"
 Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot-firebase/plugin.cfg", "res://addons/http-sse-client/plugin.cfg")

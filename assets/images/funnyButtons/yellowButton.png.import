@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dde7jaor8vval"
-path="res://.godot/imported/13Button_Long_Green.png-fd936ad832b648dc983a08523c6b0e00.ctex"
+uid="uid://e0by7nexw6n6"
+path="res://.godot/imported/yellowButton.png-c593b96b6c15e041c80ddf7efc16e3af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/funnyButtons/13Button_Long_Green.png"
-dest_files=["res://.godot/imported/13Button_Long_Green.png-fd936ad832b648dc983a08523c6b0e00.ctex"]
+source_file="res://assets/images/funnyButtons/yellowButton.png"
+dest_files=["res://.godot/imported/yellowButton.png-c593b96b6c15e041c80ddf7efc16e3af.ctex"]
 
 [params]
 

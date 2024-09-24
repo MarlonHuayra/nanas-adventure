@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://scgddebrmste"
-path="res://.godot/imported/10Button_Midl_Yellow.png-b95f8a0624d6ba663346bcc0314746d3.ctex"
+uid="uid://bcjw32uhl10gg"
+path="res://.godot/imported/pinkButton.png-16caf8ae4bd63bfb1154d81b247d4792.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/funnyButtons/10Button_Midl_Yellow.png"
-dest_files=["res://.godot/imported/10Button_Midl_Yellow.png-b95f8a0624d6ba663346bcc0314746d3.ctex"]
+source_file="res://assets/images/funnyButtons/pinkButton.png"
+dest_files=["res://.godot/imported/pinkButton.png-16caf8ae4bd63bfb1154d81b247d4792.ctex"]
 
 [params]
 

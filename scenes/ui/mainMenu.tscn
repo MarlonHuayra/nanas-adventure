@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://belhsfd3gbowt"]
+[gd_scene load_steps=35 format=4 uid="uid://belhsfd3gbowt"]
 
 [ext_resource type="Texture2D" uid="uid://ci1cw0hu1qtt7" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_category.png" id="3_vh0gf"]
 [ext_resource type="Texture2D" uid="uid://qm7jcihy8tkh" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_big_coin.png" id="4_a7tq3"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dc14nnu3khhxv" path="res://assets/images/nanasSprites/nanaBodyParts/HEADBEST.png" id="6_e84u2"]
 [ext_resource type="Texture2D" uid="uid://br7dv0nisldba" path="res://assets/images/2D Platformer Tileset/Sprites/Objects/Dungeon_Props/dungeon_door_closed.png" id="7_mr12a"]
 [ext_resource type="Texture2D" uid="uid://dw5qhka26y82t" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Stats/heart_fill.png" id="7_qyk3v"]
+[ext_resource type="Texture2D" uid="uid://dmnyduanslp8i" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_pause.png" id="8_t3qgs"]
 [ext_resource type="Texture2D" uid="uid://rhnrqlroqeou" path="res://assets/images/icons/semillaIcon.png" id="8_wribo"]
 [ext_resource type="Script" path="res://scripts/game/game_manager.gd" id="9_wsb8e"]
 [ext_resource type="FontFile" uid="uid://bh1sdy0nwhbq7" path="res://assets/fonts/BD_Cartoon_Shout.ttf" id="10_17t70"]
@@ -315,6 +316,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.00157, 1)
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
@@ -392,6 +394,18 @@ texture = ExtResource("7_mr12a")
 [node name="DungeonDoorClosed3" type="Sprite2D" parent="CanvasLayer2"]
 position = Vector2(1596, -118)
 texture = ExtResource("7_mr12a")
+
+[node name="PauseButton" type="Button" parent="CanvasLayer2"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -145.0
+offset_top = 34.0
+offset_right = -34.0
+offset_bottom = 145.569
+grow_horizontal = 0
+theme_type_variation = &"ButtonBlue"
+icon = ExtResource("8_t3qgs")
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -487,6 +501,7 @@ position = Vector2(-706, -49)
 texture = ExtResource("22_2qk6r")
 
 [node name="TileMapLayerMain" type="TileMapLayer" parent="Map"]
+position = Vector2(0, -1)
 tile_map_data = PackedByteArray("AAAFAAAAAAAJAAAAAAAEAAAAAAAJAAAAAAADAAAAAAAJAAAAAAACAAAAAAAJAAAAAAABAAAAAAAJAAAAAAAAAAAAAAAJAAAAAAD//wAAAAAJAAAAAAD8/wAAAAAJAAAAAAD7/wAAAAAJAAAAAAD9/wAAAAAJAAAAAAD+/wAAAAAJAAAAAAAJAAAAAAALAAAAAAAIAAAAAAAJAAAAAAAGAAAAAAAJAAAAAAAHAAAAAAAJAAAAAAD3/wAAAAAIAAAAAAD4/wAAAAAJAAAAAAD5/wAAAAAJAAAAAAD6/wAAAAAJAAAAAAA=")
 tile_set = SubResource("TileSet_gkna8")
 
