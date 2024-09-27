@@ -62,6 +62,5 @@ func on_signup_failed(error_code, message):
 func _change_scene():
 	get_tree().change_scene_to_file("res://scenes/levels/game.tscn")
 
-
-func _on_exit_button_pressed() -> void:
+func _on_close_button_pressed() -> void:
 	get_tree().quit()  # Finaliza el juego

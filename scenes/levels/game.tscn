@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://f6mvo3846fji"]
+[gd_scene load_steps=43 format=4 uid="uid://xin8bgpfsbyn"]
 
 [ext_resource type="Texture2D" uid="uid://dmnyduanslp8i" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_pause.png" id="1_ixabf"]
 [ext_resource type="PackedScene" uid="uid://bfaju0ynypchb" path="res://scenes/enviroment/paralaxBackground.tscn" id="1_n13u0"]
