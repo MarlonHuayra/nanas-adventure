@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=48 format=3 uid="uid://7av6ii6h38a3"]
+[gd_resource type="Theme" load_steps=56 format=3 uid="uid://7av6ii6h38a3"]
 
 [ext_resource type="FontFile" uid="uid://bh1sdy0nwhbq7" path="res://assets/fonts/BD_Cartoon_Shout.ttf" id="1_6gv33"]
 [ext_resource type="FontFile" uid="uid://oojlomnr4pab" path="res://assets/fonts/FredokaOne-Regular.ttf" id="1_ioxe2"]
@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://2a0qlxa7nex3" path="res://assets/images/funnyButtons/grayButton.png" id="4_tu6h8"]
 [ext_resource type="Texture2D" uid="uid://bcjw32uhl10gg" path="res://assets/images/funnyButtons/pinkButton.png" id="5_1kxo3"]
 [ext_resource type="Texture2D" uid="uid://dwbvnvhba3spe" path="res://assets/images/funnyButtons/redButton.png" id="5_im3lp"]
+[ext_resource type="Texture2D" uid="uid://dx3xvh0ssktnb" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_cancel.png" id="5_wp6ud"]
 [ext_resource type="FontFile" uid="uid://cm71slxy4ntqt" path="res://assets/fonts/Montserrat-SemiBold.ttf" id="6_f2ndu"]
+[ext_resource type="Texture2D" uid="uid://cdxthf2ma2hxg" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_close.png" id="6_itnsn"]
 [ext_resource type="Texture2D" uid="uid://phqbq0d1h2d1" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_left.png" id="6_totfq"]
 [ext_resource type="Texture2D" uid="uid://cor3x24cd5jl5" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Buttons/button_square_yellow.png" id="7_p0rm2"]
 [ext_resource type="Texture2D" uid="uid://pgltpc2pko23" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Buttons/button_small_red.png" id="7_t2spd"]
@@ -17,7 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://vhew8teebgt3" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Panels/header.png" id="10_lttaf"]
 [ext_resource type="Texture2D" uid="uid://e0by7nexw6n6" path="res://assets/images/funnyButtons/yellowButton.png" id="10_yhtvm"]
 [ext_resource type="Texture2D" uid="uid://50orjf7rwtoy" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Panels/panel_3.png" id="16_41f6n"]
-[ext_resource type="Texture2D" uid="uid://din05b2d4jarw" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Panels/panel.png" id="17_csaok"]
+[ext_resource type="FontFile" uid="uid://cxc3sfdake0tv" path="res://assets/fonts/Montserrat-Regular.ttf" id="16_txgty"]
+[ext_resource type="Texture2D" uid="uid://duqhpwcmbqgic" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Panels/panel_2.png" id="17_l7xvu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ylkry"]
 texture = ExtResource("2_n1bvm")
@@ -25,10 +28,10 @@ texture_margin_left = 35.0
 texture_margin_top = 15.0
 texture_margin_right = 35.0
 texture_margin_bottom = 40.0
-expand_margin_left = 3.0
-expand_margin_top = 3.0
-expand_margin_right = 3.0
-expand_margin_bottom = 3.0
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p7458"]
 texture = ExtResource("2_n1bvm")
@@ -93,6 +96,27 @@ texture_margin_left = 35.0
 texture_margin_top = 15.0
 texture_margin_right = 35.0
 texture_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_56ows"]
+texture = ExtResource("8_8d5cn")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8powo"]
+texture = ExtResource("7_t2spd")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_04cw6"]
+texture = ExtResource("7_t2spd")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ljlmp"]
 texture = ExtResource("5_1kxo3")
@@ -194,6 +218,9 @@ texture_margin_bottom = 40.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cai4k"]
 texture = ExtResource("10_lttaf")
+texture_margin_left = 30.0
+texture_margin_top = 2.0
+texture_margin_right = 30.0
 expand_margin_left = 50.0
 expand_margin_top = 20.0
 expand_margin_right = 50.0
@@ -220,6 +247,14 @@ texture_margin_bottom = 40.0
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jtttt"]
 bg_color = Color(0, 0, 0, 0.784314)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2dck7"]
+bg_color = Color(0, 0, 0, 0.784314)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_duiq2"]
 texture = ExtResource("16_41f6n")
 texture_margin_left = 25.0
@@ -227,8 +262,15 @@ texture_margin_top = 40.0
 texture_margin_right = 25.0
 texture_margin_bottom = 40.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8u668"]
-texture = ExtResource("17_csaok")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mvi6b"]
+texture = ExtResource("17_l7xvu")
+texture_margin_left = 25.0
+texture_margin_top = 40.0
+texture_margin_right = 25.0
+texture_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wnn7q"]
+texture = ExtResource("16_41f6n")
 texture_margin_left = 25.0
 texture_margin_top = 40.0
 texture_margin_right = 25.0
@@ -240,7 +282,7 @@ texture = ExtResource("9_ytdw8")
 [resource]
 Button/colors/font_outline_color = Color(0, 0, 0, 0.705882)
 Button/colors/icon_normal_color = Color(1, 1, 1, 0.784314)
-Button/constants/icon_max_width = 50
+Button/constants/icon_max_width = 60
 Button/constants/outline_size = 10
 Button/font_sizes/font_size = 30
 Button/fonts/font = ExtResource("1_ioxe2")
@@ -255,11 +297,17 @@ ButtonGray/base_type = &"Button"
 ButtonGray/styles/hover = SubResource("StyleBoxTexture_0k3r5")
 ButtonGray/styles/normal = SubResource("StyleBoxTexture_5n6j2")
 ButtonGray/styles/pressed = SubResource("StyleBoxTexture_yl2yo")
+ButtonIconUi/base_type = &"Button"
+ButtonIconUi/icons/icon = ExtResource("5_wp6ud")
+ButtonIconUi/styles/hover = SubResource("StyleBoxTexture_56ows")
+ButtonIconUi/styles/normal = SubResource("StyleBoxTexture_8powo")
+ButtonIconUi/styles/pressed = SubResource("StyleBoxTexture_04cw6")
 ButtonPink/base_type = &"Button"
 ButtonPink/styles/hover = SubResource("StyleBoxTexture_ljlmp")
 ButtonPink/styles/normal = SubResource("StyleBoxTexture_luqsy")
 ButtonPink/styles/pressed = SubResource("StyleBoxTexture_2ve5j")
 ButtonRed/base_type = &"Button"
+ButtonRed/icons/icon = ExtResource("6_itnsn")
 ButtonRed/styles/hover = SubResource("StyleBoxTexture_60qxu")
 ButtonRed/styles/normal = SubResource("StyleBoxTexture_7t6v3")
 ButtonRed/styles/pressed = SubResource("StyleBoxTexture_xaujc")
@@ -289,7 +337,11 @@ LabelHeader/constants/outline_size = 20
 LabelHeader/font_sizes/font_size = 60
 LabelHeader/styles/normal = SubResource("StyleBoxTexture_cai4k")
 LabelMedium/base_type = &"Label"
-LabelMedium/font_sizes/font_size = 20
+LabelMedium/font_sizes/font_size = 25
+LabelMontserrat/base_type = &"Label"
+LabelMontserrat/colors/font_outline_color = Color(0, 0, 0, 0)
+LabelMontserrat/font_sizes/font_size = 25
+LabelMontserrat/fonts/font = ExtResource("16_txgty")
 LineEdit/colors/caret_color = Color(0.196078, 0.196078, 0.196078, 1)
 LineEdit/colors/font_color = Color(0.196078, 0.196078, 0.196078, 1)
 LineEdit/colors/font_placeholder_color = Color(0.705882, 0.705882, 0.705882, 0.6)
@@ -301,9 +353,13 @@ LineEdit/styles/normal = SubResource("StyleBoxFlat_vjy6n")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_v57d4")
 PanelContainerBlackTransparent/base_type = &"PanelContainer"
 PanelContainerBlackTransparent/styles/panel = SubResource("StyleBoxFlat_jtttt")
+PanelContainerBlackTransparent2/base_type = &"PanelContainer"
+PanelContainerBlackTransparent2/styles/panel = SubResource("StyleBoxFlat_2dck7")
 PanelContainerHorz/base_type = &"PanelContainer"
 PanelContainerHorz/styles/panel = SubResource("StyleBoxTexture_duiq2")
 PanelContainerHorz2/base_type = &"PanelContainer"
-PanelContainerHorz2/styles/panel = SubResource("StyleBoxTexture_8u668")
+PanelContainerHorz2/styles/panel = SubResource("StyleBoxTexture_mvi6b")
+PanelContainerHorz3/base_type = &"PanelContainer"
+PanelContainerHorz3/styles/panel = SubResource("StyleBoxTexture_wnn7q")
 TextEdit/constants/line_spacing = 20
 TextEdit/styles/normal = SubResource("StyleBoxTexture_d6xnw")

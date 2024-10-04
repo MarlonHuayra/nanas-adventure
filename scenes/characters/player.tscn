@@ -635,10 +635,14 @@ script = ExtResource("1_ngh06")
 position = Vector2(7, 10)
 sprite_frames = SubResource("SpriteFrames_6wlvr")
 animation = &"nanaIdleGetObjet"
-autoplay = "nanaIdleGetObjet"
 frame_progress = 0.515272
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21.5, 48.5)
+scale = Vector2(4.5936, -2.53624)
+shape = SubResource("RectangleShape2D_43u4o")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(21.5, 48.5)
 scale = Vector2(4.5936, -2.53624)
 shape = SubResource("RectangleShape2D_43u4o")

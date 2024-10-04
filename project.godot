@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="nanasAdventure"
-run/main_scene="res://scenes/ui/authenticationUI.tscn"
+run/main_scene="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/ui/authenticationUI.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Music="*res://scenes/ui/music.tscn"
+Music="*res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/ui/music.tscn"
 Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
 
 [display]
