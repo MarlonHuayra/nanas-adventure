@@ -1,13 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://ig7wv8c121y2"]
+[gd_scene load_steps=4 format=3 uid="uid://ig7wv8c121y2"]
 
-[ext_resource type="Texture2D" uid="uid://dt4yu3nctvwq0" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_coin.png" id="1_67c37"]
-[ext_resource type="Texture2D" uid="uid://sfqkuqmlgrce" path="res://assets/backgrounds/bgLogin.png" id="1_ueh1i"]
-[ext_resource type="Texture2D" uid="uid://rhnrqlroqeou" path="res://assets/images/icons/semillaIcon.png" id="2_lvwqk"]
 [ext_resource type="Texture2D" uid="uid://dtohxjjsjpikt" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_restart.png" id="3_gauan"]
-[ext_resource type="Texture2D" uid="uid://8unamvpnhnbs" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_ad.png" id="4_giru1"]
 [ext_resource type="Texture2D" uid="uid://berog1h7fi3kf" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_start.png" id="5_3nrau"]
 [ext_resource type="Texture2D" uid="uid://vx0sj82sv56m" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_home.png" id="6_o0fpl"]
-[ext_resource type="Texture2D" uid="uid://fmywowhdfn03" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_setting.png" id="7_5t3dv"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -17,14 +12,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("1_ueh1i")
+[node name="PauseCanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
-layout_mode = 1
+[node name="BackgroundPanelContainer" type="PanelContainer" parent="PauseCanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -32,123 +22,53 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_type_variation = &"PanelContainerBlackTransparent"
 
-[node name="RewardsPanelContainer" type="PanelContainer" parent="."]
-visible = false
-layout_mode = 1
+[node name="PausePanelContainer" type="PanelContainer" parent="PauseCanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -218.5
-offset_top = -138.0
-offset_right = 218.5
-offset_bottom = 138.0
+offset_left = -350.0
+offset_top = -160.0
+offset_right = 350.0
+offset_bottom = 140.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_type_variation = &"PanelContainerHorz2"
 
-[node name="RewardsMarginContainer" type="MarginContainer" parent="RewardsPanelContainer"]
+[node name="PauseMarginContainer" type="MarginContainer" parent="PauseCanvasLayer/PausePanelContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 10
 
-[node name="RewardsGridContainer" type="GridContainer" parent="RewardsPanelContainer/RewardsMarginContainer"]
+[node name="PauseVBoxContainer" type="VBoxContainer" parent="PauseCanvasLayer/PausePanelContainer/PauseMarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/h_separation = 30
-theme_override_constants/v_separation = 10
-columns = 2
+theme_override_constants/separation = 40
 
-[node name="Coin" type="TextureRect" parent="RewardsPanelContainer/RewardsMarginContainer/RewardsGridContainer"]
-layout_mode = 2
-texture = ExtResource("1_67c37")
-
-[node name="CoinsLabel" type="Label" parent="RewardsPanelContainer/RewardsMarginContainer/RewardsGridContainer"]
-layout_mode = 2
-theme_type_variation = &"LabelSmallUi"
-text = "99 coins"
-horizontal_alignment = 1
-
-[node name="Seed" type="TextureRect" parent="RewardsPanelContainer/RewardsMarginContainer/RewardsGridContainer"]
-layout_mode = 2
-texture = ExtResource("2_lvwqk")
-expand_mode = 4
-
-[node name="SeedsLabel" type="Label" parent="RewardsPanelContainer/RewardsMarginContainer/RewardsGridContainer"]
-layout_mode = 2
-theme_type_variation = &"LabelSmallUi"
-text = "5 seeds"
-horizontal_alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -77.5
-offset_top = -69.0
-offset_right = 77.5
-offset_bottom = 69.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="Label" type="Label" parent="VBoxContainer/MarginContainer"]
+[node name="Pause" type="Label" parent="PauseCanvasLayer/PausePanelContainer/PauseMarginContainer/PauseVBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "pause
 "
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="ButtosHBoxContainer" type="HBoxContainer" parent="PauseCanvasLayer/PausePanelContainer/PauseMarginContainer/PauseVBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
 
-[node name="RestartButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="SettingButton" type="Button" parent="PauseCanvasLayer/PausePanelContainer/PauseMarginContainer/PauseVBoxContainer/ButtosHBoxContainer"]
 layout_mode = 2
-theme_type_variation = &"ButtonGray"
-text = "
-"
-icon = ExtResource("3_gauan")
-
-[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme_type_variation = &"ButtonYellow"
-text = "
-"
-icon = ExtResource("4_giru1")
-
-[node name="PlayButton" type="Button" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-text = "
-"
-icon = ExtResource("5_3nrau")
-
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/PlayButton"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="HomeButton" type="Button" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme_type_variation = &"ButtonBlue"
-text = "
-"
+size_flags_horizontal = 4
+theme_type_variation = &"ButtonPink"
 icon = ExtResource("6_o0fpl")
 
-[node name="SettingButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="ShopButton" type="Button" parent="PauseCanvasLayer/PausePanelContainer/PauseMarginContainer/PauseVBoxContainer/ButtosHBoxContainer"]
 layout_mode = 2
-theme_type_variation = &"ButtonPink"
-text = "
-"
-icon = ExtResource("7_5t3dv")
+theme_type_variation = &"ButtonGray"
+icon = ExtResource("3_gauan")
+
+[node name="PlayButton" type="Button" parent="PauseCanvasLayer/PausePanelContainer/PauseMarginContainer/PauseVBoxContainer/ButtosHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("5_3nrau")

@@ -60,7 +60,7 @@ func on_signup_failed(error_code, message):
 	%StateLabel.text = "Sign up failed"
 	
 func _change_scene():
-	get_tree().change_scene_to_file("res://scenes/levels/game.tscn")
+	get_tree().change_scene_to_file("res://scenes/ui/mainMenu.tscn")
 
 func _on_close_button_pressed() -> void:
 	get_tree().quit()  # Finaliza el juego

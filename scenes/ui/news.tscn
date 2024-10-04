@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dcclphjvposac"]
+
+[node name="News" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"PanelContainerBlackTransparent"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"LabelMedium"
+text = "Juego Multiplataforma de Acción y Aventura Educativa:"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="Label2" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_type_variation = &"LabelHeader"
+text = "\"Nana’s Eco Adventure\""
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"LabelMedium"
+text = "(Aprendizaje Interactivo sobre el Cuidado del Medio Ambiente)"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"LabelMontserrat"
+text = "\"Nana’s Eco Adventure\" es un emocionante proyecto en desarrollo 
+que combina entretenimiento y aprendizaje, sumergiendo a los jugadores 
+en un mundo mágico lleno de aventuras mientras exploran la historia de Nana. 
+Nuestro objetivo es enseñar la importancia de cuidar y respetar la naturaleza, 
+promoviendo valores de conservación ambiental y conciencia ecológica.
+
+Estamos trabajando arduamente para crear una experiencia única e interactiva 
+que permita a los jugadores aprender mientras se divierten. ¡Te invitamos a ser 
+parte de esta aventura! Síguenos en nuestras redes sociales para apoyar el 
+crecimiento del proyecto, recibir actualizaciones sobre el desarrollo y ser el primero 
+en conocer las novedades. Juntos, podemos hacer de \"Nana’s Eco Adventure\" 
+un juego inolvidable que inspire a las futuras generaciones a cuidar nuestro planeta."
+horizontal_alignment = 1

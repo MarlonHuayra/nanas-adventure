@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://534nktuifoeb"]
 
-[ext_resource type="Script" path="res://scripts/ui/levelCompleteScreen.gd" id="1_vlvlm"]
-[ext_resource type="Texture2D" uid="uid://dt4yu3nctvwq0" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_coin.png" id="1_xgpwf"]
-[ext_resource type="Texture2D" uid="uid://dxl3yasu0btd4" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Stage/star_empty.png" id="2_4t4cu"]
-[ext_resource type="Texture2D" uid="uid://rhnrqlroqeou" path="res://assets/images/icons/semillaIcon.png" id="2_dykfa"]
-[ext_resource type="Texture2D" uid="uid://bk81mpehfxg2m" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Stage/star_full.png" id="3_eapeu"]
-[ext_resource type="Texture2D" uid="uid://vx0sj82sv56m" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_home.png" id="4_y1s6o"]
-[ext_resource type="Texture2D" uid="uid://dtohxjjsjpikt" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_restart.png" id="5_cen0o"]
-[ext_resource type="Texture2D" uid="uid://berog1h7fi3kf" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_start.png" id="8_vcoqw"]
+[ext_resource type="Script" path="res://scripts/ui/levelCompleteScreen.gd" id="1_q2jcb"]
+[ext_resource type="Texture2D" uid="uid://dxl3yasu0btd4" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Stage/star_empty.png" id="2_tw0gr"]
+[ext_resource type="Texture2D" uid="uid://bk81mpehfxg2m" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Stage/star_full.png" id="3_rfc8o"]
+[ext_resource type="Texture2D" uid="uid://dt4yu3nctvwq0" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_coin.png" id="4_5mvi0"]
+[ext_resource type="Texture2D" uid="uid://rhnrqlroqeou" path="res://assets/images/icons/semillaIcon.png" id="5_g608b"]
+[ext_resource type="Texture2D" uid="uid://vx0sj82sv56m" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_home.png" id="6_htiyj"]
+[ext_resource type="Texture2D" uid="uid://dtohxjjsjpikt" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_restart.png" id="7_628hf"]
+[ext_resource type="Texture2D" uid="uid://berog1h7fi3kf" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_start.png" id="8_gk4qb"]
 
 [node name="LevelCompleteScreen" type="Control"]
 layout_mode = 3
@@ -20,9 +20,17 @@ offset_right = 8.0
 offset_bottom = 102.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_vlvlm")
+script = ExtResource("1_q2jcb")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackgroundPanelContainer" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"PanelContainerBlackTransparent"
 
 [node name="WinPanelContainer" type="PanelContainer" parent="CanvasLayer"]
 anchors_preset = 8
@@ -30,13 +38,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -225.0
-offset_top = -328.5
-offset_right = 419.0
-offset_bottom = 596.5
+offset_left = -321.0
+offset_top = -336.0
+offset_right = 323.0
+offset_bottom = 337.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.7, 0.7)
 
 [node name="WinVBoxContainer" type="VBoxContainer" parent="CanvasLayer/WinPanelContainer"]
 layout_mode = 2
@@ -45,65 +52,40 @@ alignment = 1
 
 [node name="WinLabelMarginContainer" type="MarginContainer" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 120
-theme_override_constants/margin_top = -50
-theme_override_constants/margin_right = 120
+theme_override_constants/margin_top = -60
+theme_override_constants/margin_bottom = 45
 
 [node name="WinLabel" type="Label" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/WinLabelMarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_type_variation = &"LabelHeader"
 text = "you win
 "
 horizontal_alignment = 1
 
-[node name="StarsMarginContainer" type="MarginContainer" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer"]
+[node name="StartsHBoxContainer" type="HBoxContainer" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_top = 80
+size_flags_horizontal = 4
+theme_override_constants/separation = -15
+
+[node name="star1" type="TextureRect" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/StartsHBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_tw0gr")
+
+[node name="Start2MarginContainer" type="MarginContainer" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/StartsHBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = -30
 theme_override_constants/margin_bottom = 30
 
-[node name="StarsGridContainer" type="GridContainer" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/StarsMarginContainer"]
-layout_direction = 1
+[node name="star2" type="TextureRect" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/StartsHBoxContainer/Start2MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/h_separation = 20
-columns = 3
+texture = ExtResource("3_rfc8o")
 
-[node name="star1" type="TextureRect" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/StarsMarginContainer/StarsGridContainer"]
+[node name="star3" type="TextureRect" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/StartsHBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_4t4cu")
-stretch_mode = 5
+texture = ExtResource("3_rfc8o")
 
-[node name="star2MarginContainer" type="MarginContainer" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/StarsMarginContainer/StarsGridContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = -35
-theme_override_constants/margin_top = -45
-theme_override_constants/margin_right = -35
-theme_override_constants/margin_bottom = 45
-
-[node name="star2" type="TextureRect" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/StarsMarginContainer/StarsGridContainer/star2MarginContainer"]
-layout_mode = 2
-texture = ExtResource("3_eapeu")
-stretch_mode = 5
-
-[node name="star3" type="TextureRect" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/StarsMarginContainer/StarsGridContainer"]
-layout_mode = 2
-texture = ExtResource("3_eapeu")
-stretch_mode = 5
-
-[node name="RewardsPanelContainer" type="PanelContainer" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_type_variation = &"PanelContainerHorz2"
-
-[node name="RewardsMarginContainer" type="MarginContainer" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/RewardsPanelContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 10
-
-[node name="RewardsGridContainer" type="GridContainer" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/RewardsPanelContainer/RewardsMarginContainer"]
+[node name="RewardsGridContainer" type="GridContainer" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -111,59 +93,54 @@ theme_override_constants/h_separation = 30
 theme_override_constants/v_separation = 10
 columns = 2
 
-[node name="Coin" type="TextureRect" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/RewardsPanelContainer/RewardsMarginContainer/RewardsGridContainer"]
+[node name="Coin" type="TextureRect" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/RewardsGridContainer"]
 layout_mode = 2
-texture = ExtResource("1_xgpwf")
+texture = ExtResource("4_5mvi0")
 
-[node name="CoinsLabel" type="Label" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/RewardsPanelContainer/RewardsMarginContainer/RewardsGridContainer"]
+[node name="CoinsLabel" type="Label" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/RewardsGridContainer"]
 layout_mode = 2
 theme_type_variation = &"LabelSmallUi"
 text = "99 coins"
 horizontal_alignment = 1
 
-[node name="Seed" type="TextureRect" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/RewardsPanelContainer/RewardsMarginContainer/RewardsGridContainer"]
+[node name="Seed" type="TextureRect" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/RewardsGridContainer"]
 layout_mode = 2
-texture = ExtResource("2_dykfa")
+texture = ExtResource("5_g608b")
 expand_mode = 4
 
-[node name="SeedsLabel" type="Label" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/RewardsPanelContainer/RewardsMarginContainer/RewardsGridContainer"]
+[node name="SeedsLabel" type="Label" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/RewardsGridContainer"]
 layout_mode = 2
 theme_type_variation = &"LabelSmallUi"
 text = "5 seeds"
 horizontal_alignment = 1
 
-[node name="IconButtonsMarginContainer" type="MarginContainer" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer"]
+[node name="IconsButtonsHBoxContainer" type="HBoxContainer" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 40
-theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 20
-
-[node name="IconsButtonsHBoxContainer" type="HBoxContainer" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/IconButtonsMarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 40
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 30
 alignment = 1
 
-[node name="HomeButton" type="Button" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/IconButtonsMarginContainer/IconsButtonsHBoxContainer"]
+[node name="HomeButton" type="Button" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/IconsButtonsHBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 theme_type_variation = &"ButtonPink"
-icon = ExtResource("4_y1s6o")
+icon = ExtResource("6_htiyj")
 icon_alignment = 1
 
-[node name="RestartButton" type="Button" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/IconButtonsMarginContainer/IconsButtonsHBoxContainer"]
+[node name="RestartButton" type="Button" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/IconsButtonsHBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 theme_type_variation = &"ButtonGray"
-icon = ExtResource("5_cen0o")
+icon = ExtResource("7_628hf")
 icon_alignment = 1
 
-[node name="NextButton" type="Button" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/IconButtonsMarginContainer/IconsButtonsHBoxContainer"]
+[node name="NextButton" type="Button" parent="CanvasLayer/WinPanelContainer/WinVBoxContainer/IconsButtonsHBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
-icon = ExtResource("8_vcoqw")
+icon = ExtResource("8_gk4qb")
 icon_alignment = 1
 
-[connection signal="pressed" from="CanvasLayer/WinPanelContainer/WinVBoxContainer/IconButtonsMarginContainer/IconsButtonsHBoxContainer/HomeButton" to="." method="_on_home_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/WinPanelContainer/WinVBoxContainer/IconButtonsMarginContainer/IconsButtonsHBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/WinPanelContainer/WinVBoxContainer/IconButtonsMarginContainer/IconsButtonsHBoxContainer/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/WinPanelContainer/WinVBoxContainer/IconsButtonsHBoxContainer/HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/WinPanelContainer/WinVBoxContainer/IconsButtonsHBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/WinPanelContainer/WinVBoxContainer/IconsButtonsHBoxContainer/NextButton" to="." method="_on_next_button_pressed"]

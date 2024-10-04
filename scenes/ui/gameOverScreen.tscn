@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://difaowep3rnoq"]
+[gd_scene load_steps=8 format=3 uid="uid://difaowep3rnoq"]
 
 [ext_resource type="Script" path="res://scripts/ui/gameOverScreen.gd" id="1_lv8fl"]
 [ext_resource type="Texture2D" uid="uid://ngtngl7liib8" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Stage/defeat.png" id="1_x6gmr"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://rhnrqlroqeou" path="res://assets/images/icons/semillaIcon.png" id="4_7m1h6"]
 [ext_resource type="Texture2D" uid="uid://vx0sj82sv56m" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_home.png" id="5_k3j2v"]
 [ext_resource type="Texture2D" uid="uid://dtohxjjsjpikt" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_restart.png" id="6_cllyf"]
+[ext_resource type="Texture2D" uid="uid://8unamvpnhnbs" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_ad.png" id="7_4f8uq"]
 
 [node name="GameOverScreen" type="Control"]
 layout_mode = 3
@@ -18,62 +19,50 @@ script = ExtResource("1_lv8fl")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="DefeatPanelContainer" type="PanelContainer" parent="CanvasLayer"]
+[node name="BackgroundPanelContainer" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"PanelContainerBlackTransparent"
+
+[node name="WinPanelContainer" type="PanelContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -225.0
-offset_top = -328.5
-offset_right = 419.0
-offset_bottom = 596.5
+offset_left = -321.0
+offset_top = -336.0
+offset_right = 323.0
+offset_bottom = 337.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.7, 0.7)
 
-[node name="DefeatVBoxContainer" type="VBoxContainer" parent="CanvasLayer/DefeatPanelContainer"]
+[node name="DefeatVBoxContainer" type="VBoxContainer" parent="CanvasLayer/WinPanelContainer"]
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="DefeatLabelMarginContainer" type="MarginContainer" parent="CanvasLayer/DefeatPanelContainer/DefeatVBoxContainer"]
+[node name="DefeatLabelMarginContainer" type="MarginContainer" parent="CanvasLayer/WinPanelContainer/DefeatVBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 120
-theme_override_constants/margin_top = -50
-theme_override_constants/margin_right = 120
+theme_override_constants/margin_top = -60
+theme_override_constants/margin_bottom = 45
 
-[node name="DefeatLabel" type="Label" parent="CanvasLayer/DefeatPanelContainer/DefeatVBoxContainer/DefeatLabelMarginContainer"]
+[node name="DefeatLabel" type="Label" parent="CanvasLayer/WinPanelContainer/DefeatVBoxContainer/DefeatLabelMarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_type_variation = &"LabelHeader"
-text = "defeat
-"
+text = "defeat"
 horizontal_alignment = 1
 
-[node name="StarsMarginContainer" type="MarginContainer" parent="CanvasLayer/DefeatPanelContainer/DefeatVBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_bottom = 30
-
-[node name="DefeatTextureRect" type="TextureRect" parent="CanvasLayer/DefeatPanelContainer/DefeatVBoxContainer/StarsMarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/WinPanelContainer/DefeatVBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_x6gmr")
 stretch_mode = 5
 
-[node name="RewardsPanelContainer" type="PanelContainer" parent="CanvasLayer/DefeatPanelContainer/DefeatVBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_type_variation = &"PanelContainerHorz2"
-
-[node name="RewardsMarginContainer" type="MarginContainer" parent="CanvasLayer/DefeatPanelContainer/DefeatVBoxContainer/RewardsPanelContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 10
-
-[node name="RewardsGridContainer" type="GridContainer" parent="CanvasLayer/DefeatPanelContainer/DefeatVBoxContainer/RewardsPanelContainer/RewardsMarginContainer"]
+[node name="RewardsGridContainer" type="GridContainer" parent="CanvasLayer/WinPanelContainer/DefeatVBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -81,51 +70,51 @@ theme_override_constants/h_separation = 30
 theme_override_constants/v_separation = 10
 columns = 2
 
-[node name="Coin" type="TextureRect" parent="CanvasLayer/DefeatPanelContainer/DefeatVBoxContainer/RewardsPanelContainer/RewardsMarginContainer/RewardsGridContainer"]
+[node name="Coin" type="TextureRect" parent="CanvasLayer/WinPanelContainer/DefeatVBoxContainer/RewardsGridContainer"]
 layout_mode = 2
 texture = ExtResource("3_w08gx")
 
-[node name="CoinsLabel" type="Label" parent="CanvasLayer/DefeatPanelContainer/DefeatVBoxContainer/RewardsPanelContainer/RewardsMarginContainer/RewardsGridContainer"]
+[node name="CoinsLabel" type="Label" parent="CanvasLayer/WinPanelContainer/DefeatVBoxContainer/RewardsGridContainer"]
 layout_mode = 2
 theme_type_variation = &"LabelSmallUi"
 text = "99 coins"
 horizontal_alignment = 1
 
-[node name="Seed" type="TextureRect" parent="CanvasLayer/DefeatPanelContainer/DefeatVBoxContainer/RewardsPanelContainer/RewardsMarginContainer/RewardsGridContainer"]
+[node name="Seed" type="TextureRect" parent="CanvasLayer/WinPanelContainer/DefeatVBoxContainer/RewardsGridContainer"]
 layout_mode = 2
 texture = ExtResource("4_7m1h6")
 expand_mode = 4
 
-[node name="SeedsLabel" type="Label" parent="CanvasLayer/DefeatPanelContainer/DefeatVBoxContainer/RewardsPanelContainer/RewardsMarginContainer/RewardsGridContainer"]
+[node name="SeedsLabel" type="Label" parent="CanvasLayer/WinPanelContainer/DefeatVBoxContainer/RewardsGridContainer"]
 layout_mode = 2
 theme_type_variation = &"LabelSmallUi"
 text = "5 seeds"
 horizontal_alignment = 1
 
-[node name="IconButtonsMarginContainer" type="MarginContainer" parent="CanvasLayer/DefeatPanelContainer/DefeatVBoxContainer"]
+[node name="IconsButtonsHBoxContainer" type="HBoxContainer" parent="CanvasLayer/WinPanelContainer/DefeatVBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 40
-theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 20
-
-[node name="IconsButtonsHBoxContainer" type="HBoxContainer" parent="CanvasLayer/DefeatPanelContainer/DefeatVBoxContainer/IconButtonsMarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 40
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 30
 alignment = 1
 
-[node name="HomeButton" type="Button" parent="CanvasLayer/DefeatPanelContainer/DefeatVBoxContainer/IconButtonsMarginContainer/IconsButtonsHBoxContainer"]
+[node name="HomeButton" type="Button" parent="CanvasLayer/WinPanelContainer/DefeatVBoxContainer/IconsButtonsHBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 theme_type_variation = &"ButtonPink"
 icon = ExtResource("5_k3j2v")
 icon_alignment = 1
 
-[node name="RestartButton" type="Button" parent="CanvasLayer/DefeatPanelContainer/DefeatVBoxContainer/IconButtonsMarginContainer/IconsButtonsHBoxContainer"]
+[node name="RestartButton" type="Button" parent="CanvasLayer/WinPanelContainer/DefeatVBoxContainer/IconsButtonsHBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 theme_type_variation = &"ButtonGray"
 icon = ExtResource("6_cllyf")
 icon_alignment = 1
 
-[connection signal="pressed" from="CanvasLayer/DefeatPanelContainer/DefeatVBoxContainer/IconButtonsMarginContainer/IconsButtonsHBoxContainer/HomeButton" to="." method="_on_home_button_pressed"]
+[node name="NextButton" type="Button" parent="CanvasLayer/WinPanelContainer/DefeatVBoxContainer/IconsButtonsHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_type_variation = &"ButtonYellow"
+icon = ExtResource("7_4f8uq")
+icon_alignment = 1
