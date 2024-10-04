@@ -1,4 +1,13 @@
-[gd_scene format=3 uid="uid://dcclphjvposac"]
+[gd_scene load_steps=7 format=3 uid="uid://dcclphjvposac"]
+
+[ext_resource type="Script" path="res://scripts/ui/news.gd" id="1_ex6yx"]
+[ext_resource type="Texture2D" uid="uid://dhpojlq6ea3vl" path="res://assets/images/icons/globe.png" id="1_s5i8n"]
+[ext_resource type="Texture2D" uid="uid://dteh852pwgaa0" path="res://assets/images/icons/github.png" id="2_po2i6"]
+[ext_resource type="Texture2D" uid="uid://prwgxk4gdgqy" path="res://assets/images/nanasSprites/nanaBodyParts/NANABOOMERANG.png" id="3_btkah"]
+[ext_resource type="Texture2D" uid="uid://cdxthf2ma2hxg" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_close.png" id="6_g1p81"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qf7d"]
+bg_color = Color(0.0196078, 0, 0.0588235, 1)
 
 [node name="News" type="Control"]
 layout_mode = 3
@@ -7,65 +16,138 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ex6yx")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+[node name="BackgroundPanelContainer" type="PanelContainer" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_type_variation = &"PanelContainerBlackTransparent"
+theme_override_styles/panel = SubResource("StyleBoxFlat_7qf7d")
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer"]
+[node name="NewsHBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -890.0
+offset_top = -546.0
+offset_right = 841.0
+offset_bottom = 546.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NewsMarginContainer" type="MarginContainer" parent="CanvasLayer/NewsHBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 60
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer"]
+[node name="NewsVBoxContainer" type="VBoxContainer" parent="CanvasLayer/NewsHBoxContainer/NewsMarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_constants/separation = 20
+theme_override_constants/separation = 30
 
-[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="TitleLabel1" type="Label" parent="CanvasLayer/NewsHBoxContainer/NewsMarginContainer/NewsVBoxContainer"]
 layout_mode = 2
 theme_type_variation = &"LabelMedium"
-text = "Juego Multiplataforma de Acción y Aventura Educativa:"
+text = "Juego Multiplataforma de Accion y Aventura Educativa:"
 horizontal_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_bottom = 30
-
-[node name="Label2" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+[node name="TitleLabel2" type="Label" parent="CanvasLayer/NewsHBoxContainer/NewsMarginContainer/NewsVBoxContainer"]
 layout_mode = 2
 theme_type_variation = &"LabelHeader"
 text = "\"Nana’s Eco Adventure\""
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="TitleLabel3" type="Label" parent="CanvasLayer/NewsHBoxContainer/NewsMarginContainer/NewsVBoxContainer"]
 layout_mode = 2
 theme_type_variation = &"LabelMedium"
 text = "(Aprendizaje Interactivo sobre el Cuidado del Medio Ambiente)"
 horizontal_alignment = 1
 
-[node name="Label4" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="DescriptionLabel" type="Label" parent="CanvasLayer/NewsHBoxContainer/NewsMarginContainer/NewsVBoxContainer"]
 layout_mode = 2
 theme_type_variation = &"LabelMontserrat"
-text = "\"Nana’s Eco Adventure\" es un emocionante proyecto en desarrollo 
-que combina entretenimiento y aprendizaje, sumergiendo a los jugadores 
-en un mundo mágico lleno de aventuras mientras exploran la historia de Nana. 
-Nuestro objetivo es enseñar la importancia de cuidar y respetar la naturaleza, 
-promoviendo valores de conservación ambiental y conciencia ecológica.
+text = "\"Nana’s Eco Adventure\"
+es un emocionante proyecto en desarrollo que combina
+entretenimiento y aprendizaje, sumergiendo a los jugadores
+en un mundo mágico lleno de aventuras mientras
+exploran la historia de Nana. Nuestro objetivo es
+enseñar la importancia de cuidar y respetar la naturaleza,
+promoviendo valores de conservación ambiental y
+conciencia ecológica. Estamos trabajando arduamente
+para crear una experiencia única e interactiva que
+permita a los jugadores aprender mientras se divierten.
 
-Estamos trabajando arduamente para crear una experiencia única e interactiva 
-que permita a los jugadores aprender mientras se divierten. ¡Te invitamos a ser 
-parte de esta aventura! Síguenos en nuestras redes sociales para apoyar el 
-crecimiento del proyecto, recibir actualizaciones sobre el desarrollo y ser el primero 
-en conocer las novedades. Juntos, podemos hacer de \"Nana’s Eco Adventure\" 
-un juego inolvidable que inspire a las futuras generaciones a cuidar nuestro planeta."
+¡Te invitamos a ser parte de esta aventura! Síguenos
+en nuestras redes sociales para apoyar el crecimiento
+del proyecto, recibir actualizaciones sobre el
+desarrollo y ser el primero en conocer las novedades.
+Juntos, podemos hacer de \"Nana’s Eco Adventure\" un
+juego inolvidable que inspire a las futuras generaciones
+a cuidar nuestro planeta."
 horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/NewsHBoxContainer/NewsMarginContainer/NewsVBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_right = 200
+
+[node name="ButtosHBoxContainer" type="HBoxContainer" parent="CanvasLayer/NewsHBoxContainer/NewsMarginContainer/NewsVBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="WebsiteButton" type="Button" parent="CanvasLayer/NewsHBoxContainer/NewsMarginContainer/NewsVBoxContainer/MarginContainer/ButtosHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonBlue"
+text = "Website"
+icon = ExtResource("1_s5i8n")
+
+[node name="GithubButton" type="Button" parent="CanvasLayer/NewsHBoxContainer/NewsMarginContainer/NewsVBoxContainer/MarginContainer/ButtosHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Github"
+icon = ExtResource("2_po2i6")
+
+[node name="NanaMarginContainer" type="MarginContainer" parent="CanvasLayer/NewsHBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = -200
+theme_override_constants/margin_top = 100
+
+[node name="NanaTextureRect" type="TextureRect" parent="CanvasLayer/NewsHBoxContainer/NanaMarginContainer"]
+layout_mode = 2
+texture = ExtResource("3_btkah")
+stretch_mode = 2
+
+[node name="ExitMarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -228.0
+offset_bottom = 216.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/ExitMarginContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonPink"
+icon = ExtResource("6_g1p81")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="CanvasLayer/NewsHBoxContainer/NewsMarginContainer/NewsVBoxContainer/MarginContainer/ButtosHBoxContainer/WebsiteButton" to="." method="_on_website_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/NewsHBoxContainer/NewsMarginContainer/NewsVBoxContainer/MarginContainer/ButtosHBoxContainer/GithubButton" to="." method="_on_github_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ExitMarginContainer/CloseButton" to="." method="_on_close_button_pressed"]

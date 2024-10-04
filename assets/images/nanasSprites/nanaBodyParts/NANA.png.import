@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://prwgxk4gdgqy"
-path="res://.godot/imported/NANA PIECES SAFE ASSET FOR BLENDER copy 2.png-3b78ee5fb5518ae59b0d6fba20ec63e8.ctex"
+uid="uid://edukxnukjby4"
+path="res://.godot/imported/NANA.png-437554be183ba46b6f1d981df0e31ccb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/nanasSprites/nanaBodyParts/NANA PIECES SAFE ASSET FOR BLENDER copy 2.png"
-dest_files=["res://.godot/imported/NANA PIECES SAFE ASSET FOR BLENDER copy 2.png-3b78ee5fb5518ae59b0d6fba20ec63e8.ctex"]
+source_file="res://assets/images/nanasSprites/nanaBodyParts/NANA.png"
+dest_files=["res://.godot/imported/NANA.png-437554be183ba46b6f1d981df0e31ccb.ctex"]
 
 [params]
 

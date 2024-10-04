@@ -221,9 +221,9 @@ texture = ExtResource("10_lttaf")
 texture_margin_left = 30.0
 texture_margin_top = 2.0
 texture_margin_right = 30.0
-expand_margin_left = 50.0
+expand_margin_left = 30.0
 expand_margin_top = 20.0
-expand_margin_right = 50.0
+expand_margin_right = 30.0
 expand_margin_bottom = 20.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjy6n"]
@@ -337,10 +337,10 @@ LabelHeader/constants/outline_size = 20
 LabelHeader/font_sizes/font_size = 60
 LabelHeader/styles/normal = SubResource("StyleBoxTexture_cai4k")
 LabelMedium/base_type = &"Label"
-LabelMedium/font_sizes/font_size = 25
+LabelMedium/font_sizes/font_size = 24
 LabelMontserrat/base_type = &"Label"
 LabelMontserrat/colors/font_outline_color = Color(0, 0, 0, 0)
-LabelMontserrat/font_sizes/font_size = 25
+LabelMontserrat/font_sizes/font_size = 24
 LabelMontserrat/fonts/font = ExtResource("16_txgty")
 LineEdit/colors/caret_color = Color(0.196078, 0.196078, 0.196078, 1)
 LineEdit/colors/font_color = Color(0.196078, 0.196078, 0.196078, 1)

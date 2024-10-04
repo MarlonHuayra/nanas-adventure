@@ -52,3 +52,16 @@ func _on_setting_button_pressed() -> void:
 		settingsMenuScene.window_modal = true  # Configurar como modal si es Window
 		settingsMenuScene.popup_centered()  # Centrar la ventana también
 	
+
+
+func _on_button_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_news_button_pressed() -> void:
+	var news_scene = load("res://scenes/ui/news.tscn").instantiate()
+	add_child(news_scene)
+	
+	# No es necesario centrar si ya está definido en la escena
+	if news_scene is Window:
+		news_scene.window_modal = true  # Hacer modal si es Window

@@ -333,7 +333,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_type_variation = &"LabelHeader"
 theme_override_font_sizes/font_size = 100
-text = "nanas adventure"
+text = "\"Nana’s Eco Adventure\""
 
 [node name="Main2Label" type="Label" parent="MainMenuCanvasLayer"]
 anchors_preset = 8
@@ -422,7 +422,7 @@ theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = -50
 theme_override_constants/margin_bottom = 50
 
-[node name="Button" type="Button" parent="MainMenuCanvasLayer/MarginContainer"]
+[node name="NewsButton" type="Button" parent="MainMenuCanvasLayer/MarginContainer"]
 layout_mode = 2
 theme_type_variation = &"ButtonBlue"
 text = "News"
@@ -607,3 +607,4 @@ position_smoothing_enabled = true
 [connection signal="pressed" from="MainMenuCanvasLayer/PanelContainer/MarginContainer/HBoxContainer/ShopButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MainMenuCanvasLayer/PanelContainer/MarginContainer/HBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MainMenuCanvasLayer/PanelContainer/MarginContainer/HBoxContainer/SettingButton" to="." method="_on_setting_button_pressed"]
+[connection signal="pressed" from="MainMenuCanvasLayer/MarginContainer/NewsButton" to="." method="_on_news_button_pressed"]

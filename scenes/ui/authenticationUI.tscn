@@ -104,9 +104,9 @@ theme_type_variation = &"ButtonBlue"
 text = "Sign in"
 
 [connection signal="pressed" from="LoginUiCanvasLayer/CloseMarginContainer/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="LoginUiCanvasLayer/PanelContainer/LoginMarginContainer/LoginVBoxContainer/ButtonsVBoxContainer/LoginButton" to="." method="_on_login_button_pressed"]
 [connection signal="pressed" from="LoginUiCanvasLayer/PanelContainer/LoginMarginContainer/LoginVBoxContainer/ButtonsVBoxContainer/LoginButton" to="." method="_on_login_pressed"]
 [connection signal="pressed" from="LoginUiCanvasLayer/PanelContainer/LoginMarginContainer/LoginVBoxContainer/ButtonsVBoxContainer/LoginButton" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="LoginUiCanvasLayer/PanelContainer/LoginMarginContainer/LoginVBoxContainer/ButtonsVBoxContainer/LoginButton" to="." method="_on_login_button_pressed"]
-[connection signal="pressed" from="LoginUiCanvasLayer/PanelContainer/LoginMarginContainer/LoginVBoxContainer/ButtonsVBoxContainer/SignupButton" to="." method="_on_signin_pressed"]
-[connection signal="pressed" from="LoginUiCanvasLayer/PanelContainer/LoginMarginContainer/LoginVBoxContainer/ButtonsVBoxContainer/SignupButton" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="LoginUiCanvasLayer/PanelContainer/LoginMarginContainer/LoginVBoxContainer/ButtonsVBoxContainer/SignupButton" to="." method="_on_signup_button_pressed"]
+[connection signal="pressed" from="LoginUiCanvasLayer/PanelContainer/LoginMarginContainer/LoginVBoxContainer/ButtonsVBoxContainer/SignupButton" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="LoginUiCanvasLayer/PanelContainer/LoginMarginContainer/LoginVBoxContainer/ButtonsVBoxContainer/SignupButton" to="." method="_on_signin_pressed"]
