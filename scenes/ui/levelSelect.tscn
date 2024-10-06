@@ -79,52 +79,129 @@ size_flags_vertical = 4
 theme_override_constants/h_separation = 10
 columns = 4
 
-[node name="Button" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
+[node name="Level1Button" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 60
 text = "1"
 
-[node name="Button2" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="BackgroundPanelContainer" type="PanelContainer" parent="CanvasLayer2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"PanelContainerBlackTransparent"
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -418.0
+offset_top = -253.0
+offset_right = 332.0
+offset_bottom = 194.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/PanelContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer2/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = -60
+
+[node name="LevelsLavel" type="Label" parent="CanvasLayer2/PanelContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"LabelHeader"
+text = "LEVELS
+"
+horizontal_alignment = 1
+
+[node name="CloseIconMarginContainer" type="MarginContainer" parent="CanvasLayer2/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_top = -65
+theme_override_constants/margin_right = -40
+
+[node name="CloseIconButton" type="Button" parent="CanvasLayer2/PanelContainer/VBoxContainer/CloseIconMarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"ButtonIconUi"
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer2/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer2/PanelContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/h_separation = 10
+columns = 4
+
+[node name="Level1Button" type="Button" parent="CanvasLayer2/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 60
 text = "1"
 
-[node name="Button3" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
+[node name="Level2Button" type="Button" parent="CanvasLayer2/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 60
-text = "1"
+text = "2"
 
-[node name="Button4" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
+[node name="Level3Button" type="Button" parent="CanvasLayer2/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 60
-text = "1"
+text = "3"
 
-[node name="Button5" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
+[node name="Button4" type="Button" parent="CanvasLayer2/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_type_variation = &"ButtonGray"
 theme_override_font_sizes/font_size = 60
-text = "1"
+text = "4"
 
-[node name="Button6" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
+[node name="Button5" type="Button" parent="CanvasLayer2/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_type_variation = &"ButtonGray"
 theme_override_font_sizes/font_size = 60
-text = "1"
+text = "5"
 
-[node name="Button7" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
+[node name="Button6" type="Button" parent="CanvasLayer2/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_type_variation = &"ButtonGray"
 theme_override_font_sizes/font_size = 60
-text = "1"
+text = "6"
 
-[node name="Button8" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
+[node name="Button7" type="Button" parent="CanvasLayer2/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_type_variation = &"ButtonGray"
 theme_override_font_sizes/font_size = 60
-text = "1"
+text = "7"
+
+[node name="Button8" type="Button" parent="CanvasLayer2/PanelContainer/VBoxContainer/MarginContainer2/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonGray"
+theme_override_font_sizes/font_size = 60
+text = "8"
 
 [connection signal="pressed" from="CanvasLayer/PanelContainer/VBoxContainer/CloseIconMarginContainer/CloseIconButton" to="." method="_on_close_icon_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/PanelContainer/VBoxContainer/CloseIconMarginContainer/CloseIconButton" to="." method="_on_close_icon_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/PanelContainer/VBoxContainer/MarginContainer2/GridContainer/Level1Button" to="." method="_on_level_1_button_pressed"]

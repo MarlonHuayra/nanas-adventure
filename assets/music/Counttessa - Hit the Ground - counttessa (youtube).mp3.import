@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6c76nt4cc3mf"
+path="res://.godot/imported/Counttessa - Hit the Ground - counttessa (youtube).mp3-02a5c0ec2650f9cdde0f2b48b085ba54.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Counttessa - Hit the Ground - counttessa (youtube).mp3"
+dest_files=["res://.godot/imported/Counttessa - Hit the Ground - counttessa (youtube).mp3-02a5c0ec2650f9cdde0f2b48b085ba54.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

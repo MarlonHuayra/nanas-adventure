@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Music="*res://scenes/ui/music.tscn"
 Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
+GameManager="*res://scripts/game/game_manager.gd"
 
 [display]
 

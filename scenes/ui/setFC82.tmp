@@ -22,6 +22,8 @@ script = ExtResource("1_b3hfw")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -45.0
+offset_right = -45.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_type_variation = &"PanelContainerBlackTransparent"
@@ -32,10 +34,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -375.0
-offset_top = -223.5
-offset_right = 375.0
-offset_bottom = 223.5
+offset_left = -418.0
+offset_top = -253.0
+offset_right = 332.0
+offset_bottom = 194.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -69,26 +71,38 @@ theme_type_variation = &"ButtonIconUi"
 
 [node name="MarginContainer" type="MarginContainer" parent="SettingsMenuCanvasLayer/SettingsPanelContainer/SettingsVBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/margin_top = 20
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_bottom = 22
 
 [node name="HBoxContainer" type="HBoxContainer" parent="SettingsMenuCanvasLayer/SettingsPanelContainer/SettingsVBoxContainer/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/separation = 20
+
+[node name="Label2" type="Label" parent="SettingsMenuCanvasLayer/SettingsPanelContainer/SettingsVBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "music
+
+"
 
 [node name="MusicButton" type="Button" parent="SettingsMenuCanvasLayer/SettingsPanelContainer/SettingsVBoxContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-theme_type_variation = &"ButtonBlue"
-text = "Music"
 icon = ExtResource("3_fwsxu")
+
+[node name="Label" type="Label" parent="SettingsMenuCanvasLayer/SettingsPanelContainer/SettingsVBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "sound
+
+"
 
 [node name="SoundButton" type="Button" parent="SettingsMenuCanvasLayer/SettingsPanelContainer/SettingsVBoxContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_type_variation = &"ButtonBlue"
-text = "Sound"
 icon = ExtResource("2_h4cf1")
 
 [node name="NotificationsButton" type="Button" parent="SettingsMenuCanvasLayer/SettingsPanelContainer/SettingsVBoxContainer"]

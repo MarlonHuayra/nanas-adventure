@@ -1,4 +1,10 @@
-[gd_scene format=3 uid="uid://dojmylab3p3q1"]
+[gd_scene load_steps=4 format=3 uid="uid://dojmylab3p3q1"]
+
+[ext_resource type="Script" path="res://scripts/ui/shoppingMenu.gd" id="1_g3m1v"]
+[ext_resource type="Texture2D" uid="uid://cdxthf2ma2hxg" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_close.png" id="2_6og7g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_20w5t"]
+bg_color = Color(0.0196078, 0, 0.0588235, 1)
 
 [node name="ShoppingMenu" type="Control"]
 layout_mode = 3
@@ -7,3 +13,51 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_g3m1v")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackgroundPanelContainer" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"PanelContainerBlackTransparent"
+theme_override_styles/panel = SubResource("StyleBoxFlat_20w5t")
+
+[node name="ExitMarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -170.0
+offset_bottom = 156.961
+grow_horizontal = 0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="ExitButton" type="Button" parent="CanvasLayer/ExitMarginContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonPink"
+icon = ExtResource("2_6og7g")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "shopping"
+
+[connection signal="pressed" from="CanvasLayer/ExitMarginContainer/ExitButton" to="." method="_on_exit_button_pressed"]

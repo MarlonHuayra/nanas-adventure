@@ -1,12 +1,10 @@
-[gd_scene load_steps=42 format=4 uid="uid://e28rmeikry4d"]
+[gd_scene load_steps=39 format=4 uid="uid://e28rmeikry4d"]
 
 [ext_resource type="Texture2D" uid="uid://ci1cw0hu1qtt7" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_category.png" id="1_f0oj2"]
 [ext_resource type="Texture2D" uid="uid://qm7jcihy8tkh" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_big_coin.png" id="2_pmy47"]
 [ext_resource type="Texture2D" uid="uid://coslxpm86wsyh" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Stats/portrait.png" id="3_orvmn"]
 [ext_resource type="Texture2D" uid="uid://dc14nnu3khhxv" path="res://assets/images/nanasSprites/nanaBodyParts/HEADBEST.png" id="4_1mp76"]
 [ext_resource type="Texture2D" uid="uid://dw5qhka26y82t" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Stats/heart_fill.png" id="5_imnhj"]
-[ext_resource type="Script" path="res://scripts/game/gameManager.gd" id="6_7v3tt"]
-[ext_resource type="FontFile" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="7_uicgm"]
 [ext_resource type="Texture2D" uid="uid://cx88ttkthm5y5" path="res://assets/images/2D Platformer Tileset/Sprites/Tileset/tileset_1.png" id="8_hwya6"]
 [ext_resource type="Texture2D" uid="uid://bawvknu3ymjvf" path="res://assets/images/2D Platformer Tileset/Sprites/Backgrounds/Forest_Background/bg_forest_5.png" id="9_rrbdn"]
 [ext_resource type="Texture2D" uid="uid://ul2711lt8fci" path="res://assets/images/2D Platformer Tileset/Sprites/Backgrounds/Forest_Background/bg_forest_1.png" id="10_jslp3"]
@@ -30,7 +28,6 @@
 [ext_resource type="PackedScene" uid="uid://cib4t41c15tt1" path="res://scenes/enviroment/killzone.tscn" id="28_8546x"]
 [ext_resource type="PackedScene" uid="uid://dbnimddyn6bq7" path="res://scenes/enviroment/coin.tscn" id="29_s51fy"]
 [ext_resource type="PackedScene" uid="uid://5m5yfyu5nwda" path="res://scenes/enviroment/platform.tscn" id="30_1aean"]
-[ext_resource type="FontFile" path="res://assets/fonts/PixelOperator8.ttf" id="31_bwr4q"]
 [ext_resource type="PackedScene" uid="uid://qj6m2njcuvbb" path="res://scenes/characters/slime.tscn" id="32_eb771"]
 [ext_resource type="PackedScene" uid="uid://dqbihhd3mw43x" path="res://scenes/characters/player.tscn" id="33_25fg4"]
 
@@ -421,7 +418,6 @@ text = "Nanas Adventure
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("6_7v3tt")
 
 [node name="ScoreLabel" type="Label" parent="GameManager"]
 offset_left = 651.0
@@ -429,7 +425,6 @@ offset_top = -188.0
 offset_right = 753.0
 offset_bottom = -165.0
 theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
-theme_override_fonts/font = ExtResource("7_uicgm")
 theme_override_font_sizes/font_size = 8
 text = "You colected x coins!"
 horizontal_alignment = 1
@@ -667,7 +662,6 @@ offset_top = 16.0
 offset_right = 608.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
-theme_override_fonts/font = ExtResource("7_uicgm")
 theme_override_font_sizes/font_size = 8
 text = "falling hurts"
 
@@ -677,7 +671,6 @@ offset_top = -130.0
 offset_right = 962.0
 offset_bottom = -107.0
 theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
-theme_override_fonts/font = ExtResource("31_bwr4q")
 theme_override_font_sizes/font_size = 8
 text = "allmost there..."
 
@@ -687,7 +680,6 @@ offset_top = -216.0
 offset_right = 773.0
 offset_bottom = -193.0
 theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
-theme_override_fonts/font = ExtResource("31_bwr4q")
 theme_override_font_sizes/font_size = 8
 text = "You make it!"
 
@@ -709,7 +701,7 @@ position = Vector2(7124, 4)
 position = Vector2(2304, 4)
 
 [node name="Player" parent="." instance=ExtResource("33_25fg4")]
-position = Vector2(2539, -384)
+position = Vector2(2377, -391)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(19, -67)
