@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://cg1h3e6liro77" path="res://assets/images/2D Platformer Tileset/Sprites/Enemy/Slime/run/slime_run_10.png" id="12_yeec5"]
 [ext_resource type="Texture2D" uid="uid://detqjes6tws4" path="res://assets/images/2D Platformer Tileset/Sprites/Enemy/Slime/run/slime_run_11.png" id="13_cu6ug"]
 
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_m75w0"]
 animations = [{
 "frames": [{

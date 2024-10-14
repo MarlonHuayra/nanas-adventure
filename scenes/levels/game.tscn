@@ -1,17 +1,11 @@
-[gd_scene load_steps=43 format=4 uid="uid://xin8bgpfsbyn"]
+[gd_scene load_steps=37 format=4 uid="uid://xin8bgpfsbyn"]
 
-[ext_resource type="Texture2D" uid="uid://dmnyduanslp8i" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_pause.png" id="1_ixabf"]
 [ext_resource type="PackedScene" uid="uid://bfaju0ynypchb" path="res://scenes/enviroment/paralaxBackground.tscn" id="1_n13u0"]
-[ext_resource type="Script" path="res://scripts/game/game_manager.gd" id="1_xxwlj"]
-[ext_resource type="Texture2D" uid="uid://qm7jcihy8tkh" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_big_coin.png" id="3_5hhba"]
+[ext_resource type="PackedScene" uid="uid://b3vnk73glhsw8" path="res://scenes/ui/playerHUD.tscn" id="1_w0dkr"]
 [ext_resource type="PackedScene" uid="uid://dqbihhd3mw43x" path="res://scenes/characters/player.tscn" id="3_74tqp"]
 [ext_resource type="PackedScene" uid="uid://cib4t41c15tt1" path="res://scenes/enviroment/killzone.tscn" id="4_3h2ls"]
-[ext_resource type="Texture2D" uid="uid://coslxpm86wsyh" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Stats/portrait.png" id="4_ts3av"]
-[ext_resource type="Texture2D" uid="uid://dc14nnu3khhxv" path="res://assets/images/nanasSprites/nanaBodyParts/HEADBEST.png" id="5_7saka"]
 [ext_resource type="PackedScene" uid="uid://dbnimddyn6bq7" path="res://scenes/enviroment/coin.tscn" id="5_w33ew"]
 [ext_resource type="PackedScene" uid="uid://5m5yfyu5nwda" path="res://scenes/enviroment/platform.tscn" id="6_cot81"]
-[ext_resource type="Texture2D" uid="uid://dw5qhka26y82t" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Stats/heart_fill.png" id="6_silgf"]
-[ext_resource type="Texture2D" uid="uid://rhnrqlroqeou" path="res://assets/images/icons/semillaIcon.png" id="6_wqivq"]
 [ext_resource type="FontFile" uid="uid://bh1sdy0nwhbq7" path="res://assets/fonts/BD_Cartoon_Shout.ttf" id="7_3um06"]
 [ext_resource type="PackedScene" uid="uid://qj6m2njcuvbb" path="res://scenes/characters/slime.tscn" id="8_vrr8v"]
 [ext_resource type="Texture2D" uid="uid://cx88ttkthm5y5" path="res://assets/images/2D Platformer Tileset/Sprites/Tileset/tileset_1.png" id="9_vbssm"]
@@ -356,102 +350,7 @@ _data = {
 
 [node name="Game" type="Node2D"]
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -102.0
-offset_top = 50.0
-offset_right = -51.0
-offset_bottom = 103.0
-grow_horizontal = 0
-scale = Vector2(0.8, 0.796)
-
-[node name="LogoutButton" type="Button" parent="CanvasLayer2/VBoxContainer"]
-layout_mode = 2
-theme_type_variation = &"ButtonSmallCircle"
-icon = ExtResource("1_ixabf")
-icon_alignment = 1
-
-[node name="IconBigCoin" type="Sprite2D" parent="CanvasLayer2"]
-position = Vector2(78.2, 195.2)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_5hhba")
-
-[node name="Portrait" type="Sprite2D" parent="CanvasLayer2"]
-position = Vector2(90.2, 95.2)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("4_ts3av")
-
-[node name="Headbest" type="Sprite2D" parent="CanvasLayer2"]
-position = Vector2(89.2, 88.2)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("5_7saka")
-
-[node name="HeartFill" type="Sprite2D" parent="CanvasLayer2"]
-position = Vector2(199.2, 100.2)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_silgf")
-
-[node name="HeartFill2" type="Sprite2D" parent="CanvasLayer2"]
-position = Vector2(260.2, 100.2)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_silgf")
-
-[node name="HeartFill3" type="Sprite2D" parent="CanvasLayer2"]
-position = Vector2(318.2, 100.2)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_silgf")
-
-[node name="LabelCoinsCount" type="Label" parent="CanvasLayer2"]
-offset_left = 114.2
-offset_top = 176.2
-offset_right = 200.2
-offset_bottom = 211.2
-theme_override_font_sizes/font_size = 20
-text = "0 Coins
-"
-
-[node name="LabelCoinsCount2" type="Label" parent="CanvasLayer2"]
-offset_left = 114.2
-offset_top = 226.0
-offset_right = 200.2
-offset_bottom = 261.0
-theme_override_font_sizes/font_size = 20
-text = "0 Seeds
-"
-
-[node name="Nanas Acventure" type="Label" parent="CanvasLayer2"]
-offset_left = 171.0
-offset_top = 28.0
-offset_right = 381.0
-offset_bottom = 63.0
-theme_override_font_sizes/font_size = 25
-text = "Nanas Adventure : Welcome Marlon
-"
-
-[node name="SemillaIcon" type="Sprite2D" parent="CanvasLayer2"]
-position = Vector2(78, 242)
-scale = Vector2(0.226988, 0.226988)
-texture = ExtResource("6_wqivq")
-
-[node name="GameManager" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("1_xxwlj")
-
-[node name="ScoreLabel" type="Label" parent="GameManager"]
-offset_left = 651.0
-offset_top = -188.0
-offset_right = 753.0
-offset_bottom = -165.0
-theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
-theme_override_fonts/font = ExtResource("7_3um06")
-theme_override_font_sizes/font_size = 8
-text = "You colected x coins!"
-horizontal_alignment = 1
-autowrap_mode = 2
+[node name="PlayerHUD" parent="." instance=ExtResource("1_w0dkr")]
 
 [node name="Map" type="Node" parent="."]
 
@@ -604,7 +503,7 @@ position = Vector2(405, -82)
 texture = ExtResource("10_8wlrb")
 
 [node name="Killzone" parent="Map" instance=ExtResource("4_3h2ls")]
-position = Vector2(0, 768)
+position = Vector2(0, 649)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Killzone"]
 shape = SubResource("WorldBoundaryShape2D_aab18")
@@ -739,5 +638,3 @@ position = Vector2(100, -100)
 offset = Vector2(1, 1)
 limit_smoothed = true
 position_smoothing_enabled = true
-
-[connection signal="pressed" from="CanvasLayer2/VBoxContainer/LogoutButton" to="GameManager" method="_on_logout_button_pressed"]

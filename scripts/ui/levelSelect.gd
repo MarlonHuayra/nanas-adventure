@@ -14,5 +14,5 @@ func _on_close_icon_button_pressed() -> void:
 	queue_free()  # Esto elimina la instancia de levelSelect sin recargar mainMenu
 
 
-#func _on_level_1_button_pressed() -> void:
-	#get_tree().change_scene_to_file("res://scenes/levels/level1.tscn")
+func _on_level_1_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/levels/game.tscn")

@@ -1,0 +1,63 @@
+[gd_scene load_steps=11 format=3 uid="uid://dj72ehbgcionx"]
+
+[ext_resource type="Texture2D" uid="uid://b1u0w80amvlr1" path="res://assets/images/nanasSprites/nanaBoomerang/nanaboomerang0001.png" id="1_pt0vj"]
+[ext_resource type="Texture2D" uid="uid://dx3kosrnpie48" path="res://assets/images/nanasSprites/nanaBoomerang/nanaboomerang0002.png" id="2_m3j73"]
+[ext_resource type="Texture2D" uid="uid://dv5ny85jkdhhl" path="res://assets/images/nanasSprites/nanaBoomerang/nanaboomerang0003.png" id="3_ytjfi"]
+[ext_resource type="Texture2D" uid="uid://b0wwmhij548b2" path="res://assets/images/nanasSprites/nanaBoomerang/nanaboomerang0004.png" id="4_3vw3v"]
+[ext_resource type="Texture2D" uid="uid://c0a7ojlk0c18x" path="res://assets/images/nanasSprites/nanaBoomerang/nanaboomerang0005.png" id="5_feiiu"]
+[ext_resource type="Texture2D" uid="uid://037aa8u5j8k2" path="res://assets/images/nanasSprites/nanaBoomerang/nanaboomerang0006.png" id="6_7l8lb"]
+[ext_resource type="Texture2D" uid="uid://c02acfmiwb1ij" path="res://assets/images/nanasSprites/nanaBoomerang/nanaboomerang0007.png" id="7_4thyy"]
+[ext_resource type="Texture2D" uid="uid://cakkbbfe5jr70" path="res://assets/images/nanasSprites/nanaBoomerang/nanaboomerang0008.png" id="8_ddxb0"]
+[ext_resource type="Script" path="res://scripts/game/boomerang.gd" id="10_20smi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_feu0b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pt0vj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_m3j73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ytjfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3vw3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_feiiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7l8lb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4thyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ddxb0")
+}],
+"loop": true,
+"name": &"boomerangSpin",
+"speed": 24.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Boomerang" type="AnimatedSprite2D"]
+z_index = 20
+sprite_frames = SubResource("SpriteFrames_feu0b")
+animation = &"boomerangSpin"
+autoplay = "boomerangSpin"
+frame_progress = 0.585992
+script = ExtResource("10_20smi")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

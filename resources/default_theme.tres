@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=66 format=3 uid="uid://7av6ii6h38a3"]
+[gd_resource type="Theme" load_steps=67 format=3 uid="uid://7av6ii6h38a3"]
 
 [ext_resource type="FontFile" uid="uid://bh1sdy0nwhbq7" path="res://assets/fonts/BD_Cartoon_Shout.ttf" id="1_6gv33"]
 [ext_resource type="FontFile" uid="uid://oojlomnr4pab" path="res://assets/fonts/FredokaOne-Regular.ttf" id="1_ioxe2"]
@@ -297,6 +297,19 @@ expand_margin_top = 20.0
 expand_margin_right = 30.0
 expand_margin_bottom = 20.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7mfo"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 0.365, 0.365, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_detail = 1
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjy6n"]
 bg_color = Color(0.961023, 0.957155, 0.96511, 1)
 border_width_bottom = 5
@@ -422,7 +435,15 @@ LabelHeader/constants/outline_size = 20
 LabelHeader/font_sizes/font_size = 60
 LabelHeader/styles/normal = SubResource("StyleBoxTexture_cai4k")
 LabelMedium/base_type = &"Label"
+LabelMedium/colors/font_outline_color = Color(0, 0, 0, 1)
+LabelMedium/colors/font_shadow_color = Color(0, 0, 0, 1)
+LabelMedium/constants/line_spacing = 0
+LabelMedium/constants/outline_size = 0
+LabelMedium/constants/shadow_offset_x = 0
+LabelMedium/constants/shadow_offset_y = 0
+LabelMedium/constants/shadow_outline_size = 0
 LabelMedium/font_sizes/font_size = 24
+LabelMedium/styles/normal = SubResource("StyleBoxFlat_h7mfo")
 LabelMontserrat/base_type = &"Label"
 LabelMontserrat/colors/font_outline_color = Color(0, 0, 0, 0)
 LabelMontserrat/font_sizes/font_size = 24

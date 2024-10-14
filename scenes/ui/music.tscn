@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://bpl6ppmpne6jy"]
 
-[ext_resource type="AudioStream" uid="uid://hde58yljoxtj" path="res://assets/music/JungleMusic.mp3" id="1_k00yp"]
+[ext_resource type="AudioStream" uid="uid://blu7spiyetda" path="res://assets/music/Dragonforce - Fairy Tail (Lofi Remix) - joripu. (youtube).mp3" id="1_e1xdq"]
 
 [node name="Music" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_k00yp")
+stream = ExtResource("1_e1xdq")
 autoplay = true
+max_distance = 20000.0
 bus = &"Music"

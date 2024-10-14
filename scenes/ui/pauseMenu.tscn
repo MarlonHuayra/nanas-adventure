@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://ig7wv8c121y2"]
+[gd_scene load_steps=5 format=3 uid="uid://ig7wv8c121y2"]
 
+[ext_resource type="Script" path="res://scripts/ui/pauseMenu.gd" id="1_dtxrp"]
 [ext_resource type="Texture2D" uid="uid://dtohxjjsjpikt" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_restart.png" id="3_gauan"]
 [ext_resource type="Texture2D" uid="uid://berog1h7fi3kf" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_start.png" id="5_3nrau"]
 [ext_resource type="Texture2D" uid="uid://vx0sj82sv56m" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_home.png" id="6_o0fpl"]
@@ -11,10 +12,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_dtxrp")
 
-[node name="PauseCanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="BackgroundPanelContainer" type="PanelContainer" parent="PauseCanvasLayer"]
+[node name="BackgroundPanelContainer" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -22,7 +24,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_type_variation = &"PanelContainerBlackTransparent"
 
-[node name="PausePanelContainer" type="PanelContainer" parent="PauseCanvasLayer"]
+[node name="PausePanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -38,37 +41,41 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_type_variation = &"PanelContainerHorz2"
 
-[node name="PauseMarginContainer" type="MarginContainer" parent="PauseCanvasLayer/PausePanelContainer"]
+[node name="PauseMarginContainer" type="MarginContainer" parent="PausePanelContainer"]
 layout_mode = 2
 theme_override_constants/margin_top = 10
 
-[node name="PauseVBoxContainer" type="VBoxContainer" parent="PauseCanvasLayer/PausePanelContainer/PauseMarginContainer"]
+[node name="PauseVBoxContainer" type="VBoxContainer" parent="PausePanelContainer/PauseMarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 40
 
-[node name="Pause" type="Label" parent="PauseCanvasLayer/PausePanelContainer/PauseMarginContainer/PauseVBoxContainer"]
+[node name="Pause" type="Label" parent="PausePanelContainer/PauseMarginContainer/PauseVBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "pause
 "
 
-[node name="ButtosHBoxContainer" type="HBoxContainer" parent="PauseCanvasLayer/PausePanelContainer/PauseMarginContainer/PauseVBoxContainer"]
+[node name="ButtosHBoxContainer" type="HBoxContainer" parent="PausePanelContainer/PauseMarginContainer/PauseVBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 30
 
-[node name="SettingButton" type="Button" parent="PauseCanvasLayer/PausePanelContainer/PauseMarginContainer/PauseVBoxContainer/ButtosHBoxContainer"]
+[node name="MainMenuButton" type="Button" parent="PausePanelContainer/PauseMarginContainer/PauseVBoxContainer/ButtosHBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_type_variation = &"ButtonPink"
 icon = ExtResource("6_o0fpl")
 
-[node name="ShopButton" type="Button" parent="PauseCanvasLayer/PausePanelContainer/PauseMarginContainer/PauseVBoxContainer/ButtosHBoxContainer"]
+[node name="RestartLevelButton" type="Button" parent="PausePanelContainer/PauseMarginContainer/PauseVBoxContainer/ButtosHBoxContainer"]
 layout_mode = 2
 theme_type_variation = &"ButtonGray"
 icon = ExtResource("3_gauan")
 
-[node name="PlayButton" type="Button" parent="PauseCanvasLayer/PausePanelContainer/PauseMarginContainer/PauseVBoxContainer/ButtosHBoxContainer"]
+[node name="PlayLevelButton" type="Button" parent="PausePanelContainer/PauseMarginContainer/PauseVBoxContainer/ButtosHBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 icon = ExtResource("5_3nrau")
+
+[connection signal="pressed" from="PausePanelContainer/PauseMarginContainer/PauseVBoxContainer/ButtosHBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="PausePanelContainer/PauseMarginContainer/PauseVBoxContainer/ButtosHBoxContainer/RestartLevelButton" to="." method="_on_restart_level_button_pressed"]
+[connection signal="pressed" from="PausePanelContainer/PauseMarginContainer/PauseVBoxContainer/ButtosHBoxContainer/PlayLevelButton" to="." method="_on_play_level_button_pressed"]

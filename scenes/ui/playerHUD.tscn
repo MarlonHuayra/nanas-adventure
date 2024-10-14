@@ -1,32 +1,104 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3vnk73glhsw8"]
+[gd_scene load_steps=9 format=3 uid="uid://b3vnk73glhsw8"]
 
-[ext_resource type="Texture2D" uid="uid://dmnyduanslp8i" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_pause.png" id="6_lrcgh"]
+[ext_resource type="Script" path="res://scripts/ui/playerHUD.gd" id="1_dteqc"]
+[ext_resource type="Texture2D" uid="uid://qm7jcihy8tkh" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_big_coin.png" id="1_wt50t"]
+[ext_resource type="Texture2D" uid="uid://coslxpm86wsyh" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Stats/portrait.png" id="2_esras"]
+[ext_resource type="Texture2D" uid="uid://dc14nnu3khhxv" path="res://assets/images/nanasSprites/nanaBodyParts/HEADBEST.png" id="3_xh61o"]
+[ext_resource type="Texture2D" uid="uid://dw5qhka26y82t" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Stats/heart_fill.png" id="4_tj2e2"]
+[ext_resource type="Texture2D" uid="uid://rhnrqlroqeou" path="res://assets/images/icons/semillaIcon.png" id="5_hyqgb"]
+[ext_resource type="Texture2D" uid="uid://dmnyduanslp8i" path="res://assets/images/2D Platformer Tileset/Simple UI Pack/Sprites/Icons/icon_small_pause.png" id="7_1ggob"]
+[ext_resource type="PackedScene" uid="uid://ig7wv8c121y2" path="res://scenes/ui/pauseMenu.tscn" id="8_nnpxn"]
 
-[node name="PlayerHud" type="Control"]
+[node name="PlayerHUD" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_dteqc")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="PlayerHUDCanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseMarginContainer" type="MarginContainer" parent="CanvasLayer"]
+[node name="IconBigCoin" type="Sprite2D" parent="PlayerHUDCanvasLayer"]
+position = Vector2(87.2, 205.2)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_wt50t")
+
+[node name="Portrait" type="Sprite2D" parent="PlayerHUDCanvasLayer"]
+position = Vector2(102.2, 100.2)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_esras")
+
+[node name="Headbest" type="Sprite2D" parent="PlayerHUDCanvasLayer"]
+position = Vector2(101.2, 93.2)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_xh61o")
+
+[node name="HeartFill" type="Sprite2D" parent="PlayerHUDCanvasLayer"]
+position = Vector2(211.2, 113.2)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_tj2e2")
+
+[node name="HeartFill2" type="Sprite2D" parent="PlayerHUDCanvasLayer"]
+position = Vector2(272.2, 113.2)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_tj2e2")
+
+[node name="HeartFill3" type="Sprite2D" parent="PlayerHUDCanvasLayer"]
+position = Vector2(330.2, 113.2)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_tj2e2")
+
+[node name="CoinsCountLabel" type="Label" parent="PlayerHUDCanvasLayer"]
+offset_left = 123.2
+offset_top = 193.2
+offset_right = 220.2
+offset_bottom = 228.2
+theme_override_font_sizes/font_size = 20
+text = "1212 coins
+"
+
+[node name="SeedsCountLabel" type="Label" parent="PlayerHUDCanvasLayer"]
+offset_left = 123.2
+offset_top = 243.0
+offset_right = 225.2
+offset_bottom = 278.0
+theme_override_font_sizes/font_size = 20
+text = "0 seeds"
+
+[node name="NameLabel" type="Label" parent="PlayerHUDCanvasLayer"]
+offset_left = 183.0
+offset_top = 50.0
+offset_right = 393.0
+offset_bottom = 85.0
+theme_type_variation = &"LabelMedium"
+text = "OffSpring
+"
+
+[node name="SemillaIcon" type="Sprite2D" parent="PlayerHUDCanvasLayer"]
+position = Vector2(87, 252)
+scale = Vector2(0.226988, 0.226988)
+texture = ExtResource("5_hyqgb")
+
+[node name="PauseMarginContainer" type="MarginContainer" parent="PlayerHUDCanvasLayer"]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -120.0
-offset_right = 50.0
-offset_bottom = 157.586
+offset_left = -170.0
+offset_bottom = 156.961
 grow_horizontal = 0
-scale = Vector2(0.7, 0.7)
-theme_override_constants/margin_left = 25
-theme_override_constants/margin_top = 25
-theme_override_constants/margin_right = 25
-theme_override_constants/margin_bottom = 25
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
 
-[node name="PauseButton" type="Button" parent="CanvasLayer/PauseMarginContainer"]
+[node name="PauseButton" type="Button" parent="PlayerHUDCanvasLayer/PauseMarginContainer"]
 layout_mode = 2
 theme_type_variation = &"ButtonPink"
-icon = ExtResource("6_lrcgh")
+icon = ExtResource("7_1ggob")
+
+[node name="PauseMenu" parent="PlayerHUDCanvasLayer" instance=ExtResource("8_nnpxn")]
+visible = false
+
+[connection signal="pressed" from="PlayerHUDCanvasLayer/PauseMarginContainer/PauseButton" to="." method="_on_pause_button_pressed"]

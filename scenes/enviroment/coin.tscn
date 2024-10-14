@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://b52i14jnw3onq" path="res://assets/images/2D Platformer Tileset/Sprites/Animations/Coin/coin_7.png" id="8_p45t7"]
 [ext_resource type="Texture2D" uid="uid://c5dspf82jl4fw" path="res://assets/images/2D Platformer Tileset/Sprites/Animations/Coin/coin_8.png" id="9_cbpyg"]
 
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_o17i8"]
 animations = [{
 "frames": [{
